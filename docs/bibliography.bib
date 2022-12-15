@@ -49,3 +49,50 @@ series = {SIGMOD '14}
   author = {Don Chamberlin},
   url = {https://info.couchbase.com/rs/302-GJY-034/images/Comparing_Two_SQL_Based_Approaches_WP.pdf}
 }
+
+@TechReport{XQuery31,
+  author      = "Jonathan Robie and Michael Dyck and Josh Spiegel",
+  title       = "XQuery 3.1: An XML Query Language",
+  month       = march,
+  note        = "https://www.w3.org/TR/xquery-31/",
+  year        = "2017",
+  type        = "Recommendation",
+  institution = "W3C",
+}
+
+@unpublished{Chamberlin2003XQuery,
+  author = {Don Chamberlin},
+  title  = {XQuery: A Query Language for XML (slides)},
+  month  = june,
+  year   = {2003},
+  url    = {https://cseweb.ucsd.edu/classes/wi19/cse232B-a/papers/sigmod03_xquery.pdf},
+}
+
+@article{10.1007/s00778-002-0074-9,
+author = {Ailamaki, Anastassia and DeWitt, David J. and Hill, Mark D.},
+title = {Data Page Layouts for Relational Databases on Deep Memory Hierarchies},
+year = {2002},
+issue_date = {November 2002},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+volume = {11},
+number = {3},
+issn = {1066-8888},
+url = {https://doi.org/10.1007/s00778-002-0074-9},
+doi = {10.1007/s00778-002-0074-9},
+abstract = {Relational database systems have traditionally optimized for I/O performance and organized records sequentially on disk pages using the N-ary Storage Model (NSM) (a.k.a., slotted pages). Recent research, however, indicates that cache utilization and performance is becoming increasingly important on modern platforms. In this paper, we first demonstrate that in-page data placement is the key to high cache performance and that NSM exhibits low cache utilization on modern platforms. Next, we propose a new data organization model called PAX (Partition Attributes Across), that significantly improves cache performance by grouping together all values of each attribute within each page. Because PAX only affects layout inside the pages, it incurs no storage penalty and does not affect I/O behavior. According to our experimental results (which were obtained without using any indices on the participating relations), when compared to NSM: (a) PAX exhibits superior cache and memory bandwidth utilization, saving at least 75\% of NSM's stall time due to data cache accesses; (b) range selection queries and updates on memory-resident relations execute 1725\% faster; and (c) TPC-H queries involving I/O execute 1148\% faster. Finally, we show that PAX performs well across different memory system designs.},
+journal = {The VLDB Journal},
+month = {nov},
+pages = {198–215},
+numpages = {18},
+keywords = {Disk page layout, Cache-conscious database systems, Relational data placement}
+}
+
+@misc{CHMOralHistoryOfDonaldChamberlin,
+  title = {Oral History of Donald Chamberlin},
+  author = {Paul McJones},
+  publisher = {Computer History Museum},
+  url = {https://archive.computerhistory.org/resources/access/text/2015/06/102702111-05-01-acc.pdf},
+  month = july,
+  year = {2009},
+}
