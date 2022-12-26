@@ -98,7 +98,7 @@ body::before {
   height: 100%;
   z-index: -1;
   background-color: var(--background-color);
-  background-image: url('../images/background19.png');
+  background-image: url('/resources/images/background19.jpg');
   /* filter: saturate(50%) contrast(150%) sepia(50%); */
   /* filter: saturate(50%) contrast(250%) blur(1px); */
   opacity: 0.6;
