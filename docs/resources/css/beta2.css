@@ -199,7 +199,8 @@ main a b {
 }
 
 nav {
-    margin-left: auto;
+  margin-left: auto;
+  font-size: 2rem;
 }
 
 ul {
