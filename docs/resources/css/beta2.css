@@ -144,6 +144,10 @@ header {
     border-color: var(--endb-green);
 }
 
+.invisible {
+  background: transparent;
+}
+
 body > footer {
     color: var(--color);
     top: 100vh;
@@ -162,6 +166,13 @@ main h2 {
   color: var(--color);
   background-color: var(--background-color);
   font-size: 3rem;
+}
+
+main article section > p {
+  padding: 1rem;
+  color: var(--color);
+  background-color: var(--background-color);
+  font-size: 1.25rem;
 }
 
 main section {
