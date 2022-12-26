@@ -2,6 +2,14 @@
 
 endatabas.com
 
+## Build
+
+Only builds the bibliography for now. Requires `bibtex2html`.
+
+```sh
+./bin/build.sh
+```
+
 ## Copyright and License
 
 Copyright 2022 Håkan Råberg and Steven Deobald.
