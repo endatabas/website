@@ -20,6 +20,8 @@
   --hover-brightness: 1.2;
   --line-height: 1.5;
   --width-content: 1080px;
+  --endb-yellow: #B0A974;
+  --endb-green: #32382E;
 }
 
 body {
@@ -107,8 +109,8 @@ body::before {
 
 header {
     display: flex;
-    background-color: #32382E;
-    color: #B0A974;
+    background-color: var(--endb-green);
+    color: var(--endb-yellow);
     padding: 0 3rem;
     margin-bottom: 4rem;
     -webkit-print-color-adjust:exact !important;
@@ -124,7 +126,7 @@ header {
 }
 
 .logo a {
-    color: #B0A974;
+    color: var(--endb-yellow);
 }
 
 .logo a:hover {
@@ -133,21 +135,21 @@ header {
 }
 
 .logo .letter-box {
-    background-color: #B0A974;
-    color: #32382E;
+    background-color: var(--endb-yellow);
+    color: var(--endb-green);
     margin-left: -0.05em;
     border: 0;
     border-left: 0.05em;
     border-style: solid;
-    border-color: #32382E;
+    border-color: var(--endb-green);
 }
 
 body > footer {
-    color: #32382E;
+    color: var(--color);
     top: 100vh;
     position: sticky;
     text-align: center;
-    padding: 0;
+    padding: 1rem;
     margin-top: 4rem;
 }
 
@@ -179,9 +181,9 @@ section {
 main a b {
     margin-top: 2rem;
     border-radius: 0.5rem;
-    border: 3px solid #32382E;
-    background-color: #B0A974;
-    color: #32382E;
+    border: 3px solid var(--endb-green);
+    background-color: var(--endb-yellow);
+    color: var(--endb-green);
     font-size: 2rem;
 }
 
@@ -198,14 +200,14 @@ nav ul li {
 }
 
 nav a {
-    color: #B0A974;
+    color: var(--endb-yellow);
 }
 
 nav a b {
     border-radius: 0.25rem;
     border: 1px solid black;
-    background-color: #B0A974;
-    color: #32382E;
+    background-color: var(--endb-yellow);
+    color: var(--endb-green);
     padding: 0.5rem;
     font-size: 1rem;
 }
@@ -216,12 +218,24 @@ nav > a {
     display: none;
 }
 
+article {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  gap: 2rem;
+}
+
+article section {
+  flex: 0 1 40%;
+}
+
 blockquote {
-    text-align: justify;
-    font-size: 1.5rem;
-    max-width: 48rem;
-    margin: 0;
-    font-family: 'Special Elite';
+  text-align: justify;
+  font-size: 1.5rem;
+  max-width: 48rem;
+  margin: 0;
+  font-family: 'Special Elite';
 }
 
 blockquote pre {
@@ -260,9 +274,13 @@ blockquote footer a {
         padding: 0 1rem;
     }
 
-    header, section, h2 {
-        margin: 2rem 0;
-    }
+  article section {
+    flex: 0 1 80%;
+  }
+
+  header, section, h2 {
+    margin: 2rem 0;
+  }
 
     header {
         padding: 0 0.5rem;
@@ -285,7 +303,7 @@ blockquote footer a {
         top: 3.5rem;
         display: block;
         width: 100%;
-        background-color: #32382E;
+        background-color: var(--endb-green);
         font-size: 2rem;
     }
 
@@ -314,9 +332,9 @@ blockquote footer a {
         padding: 0.5rem;
     }
 
-    header, section, h2 {
-        margin: 0.5rem 0;
-    }
+  header, section, h2 {
+    margin: 0.5rem 0;
+  }
 
     header {
         margin-top: 0;

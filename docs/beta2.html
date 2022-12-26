@@ -40,6 +40,7 @@
     <!--   </ul> -->
     <!-- </nav> -->
   </header>
+
   <main>
     <h2>Dynamic SQL in the Clouds.</h2>
     <!-- <section> -->
@@ -53,43 +54,52 @@
     <!--     <footer><a href="https://en.wikipedia.org/wiki/The_Archaeology_of_Knowledge" title="L'archéologie du savoir"><em>L'archéologie du savoir</em> Foucault, 1969</a></footer> -->
     <!--   </blockquote> -->
     <!-- </section> -->
-    <section>
-      <h3>Relational Database as a Service</h3>
-      <blockquote>
-        <p>Future users of large data banks must be protected from having to know how the data is organized in the machine (the internal representation).</p>
-        <footer><a href="https://dl.acm.org/doi/10.1145/362384.362685" title="A Relational Model of Data for Large Shared Data Banks"><em>A Relational Model of Data for Large Shared Data Banks</em> Codd, 1970</a></footer>
-      </blockquote>
-    </section>
-    <section>
-      <h3>SQL: Forever Young</h3>
-      <blockquote>
-        <p>Q1. Find the names of employees in the toy department.</p>
-        <pre>SELECT NAME
+
+    <article>
+
+      <section>
+        <h3>Immutable Data and Temporal Query</h3>
+        <blockquote>
+          <p>2.2.1 The importance of access to past states</p>
+          <p>In human memory, no deletion mechanism exists […] Although human memory exhibits a decay characteristic, people do not delete. The deletion concept was invented to reuse expensive computer storage.</p>
+          <footer><a href="https://dl.acm.org/doi/10.1145/800083.802685" title="What if Mass Storage Were Free?"><em>What if Mass Storage Were Free?</em>Copeland, 1980</a></footer>
+        </blockquote>
+      </section>
+
+      <section>
+        <h3>SQL: Forever Young</h3>
+        <blockquote>
+          <p>Q1. Find the names of employees in the toy department.</p>
+          <pre>SELECT NAME
 FROM EMP
-WHERE DEPT = "TOY"</pre>
-        <p>SEQUEL presents the user with a consistent template for expression of simple queries.</p>
-        <footer><a href="https://dl.acm.org/doi/10.1145/800296.811515" title="SEQUEL: A Structured English Query Language"><em>SEQUEL: A Structured English Query Language</em>Chamberlin & Boyce, 1974</a></footer>
-      </blockquote>
-    </section>
-    <section>
-      <h3>Immutable Data and Temporal Query</h3>
-      <blockquote>
-        <p>2.2.1 The importance of access to past states</p>
-        <p>In human memory, no deletion mechanism exists […] Although human memory exhibits a decay characteristic, people do not delete. The deletion concept was invented to reuse expensive computer storage.</p>
-        <footer><a href="https://dl.acm.org/doi/10.1145/800083.802685" title="What if Mass Storage Were Free?"><em>What if Mass Storage Were Free?</em>Copeland, 1980</a></footer>
-      </blockquote>
-    </section>
-    <section>
-      <h3>Dynamic and Semi-Structured Records</h3>
-      <blockquote>
-        <p>Clearly, a database system that easily accommodates irregular data and changes in structure would greatly facilitate the rapid integration of heterogeneous databases.</p>
-        <footer><a href="https://dl.acm.org/doi/10.1145/262762.262770" title="Lore: A Database Management System for Semistructured Data"><em>Lore: A Database Management System for Semistructured Data</em>McHugh et al., 1997</a></footer>
-      </blockquote>
-    </section>
+WHERE DEPT = 'TOY'</pre>
+          <p>SEQUEL presents the user with a consistent template for expression of simple queries.</p>
+          <footer><a href="https://dl.acm.org/doi/10.1145/800296.811515" title="SEQUEL: A Structured English Query Language"><em>SEQUEL: A Structured English Query Language</em>Chamberlin & Boyce, 1974</a></footer>
+        </blockquote>
+      </section>
+
+      <section>
+        <h3>Dynamic and Semi-Structured Records</h3>
+        <blockquote>
+          <p>Clearly, a database system that easily accommodates irregular data and changes in structure would greatly facilitate the rapid integration of heterogeneous databases.</p>
+          <footer><a href="https://dl.acm.org/doi/10.1145/262762.262770" title="Lore: A Database Management System for Semistructured Data"><em>Lore: A Database Management System for Semistructured Data</em>McHugh et al., 1997</a></footer>
+        </blockquote>
+      </section>
+
+      <section>
+        <h3>Relational Database as a Service</h3>
+        <blockquote>
+          <p>Future users of large data banks must be protected from having to know how the data is organized in the machine (the internal representation).</p>
+          <footer><a href="https://dl.acm.org/doi/10.1145/362384.362685" title="A Relational Model of Data for Large Shared Data Banks"><em>A Relational Model of Data for Large Shared Data Banks</em> Codd, 1970</a></footer>
+        </blockquote>
+      </section>
+
+    </article>
   </main>
+
   <footer>
-    Copyright © 2023 Endatabas AB
+    Copyright © 2023 Endatabas
   </footer>
-</bod>
+</body>
 
 </html>

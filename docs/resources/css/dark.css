@@ -1,5 +1,7 @@
 /* dark.css: light-on-dark */
 :root {
-  --color: rgb(250, 250, 250);
-  --background-color: rgb(5, 5, 5);
+  /* --color: rgb(250, 250, 250);
+     --background-color: rgb(5, 5, 5); */
+  --color: #eff2ef; // #efeee3; // #e7e5d5; // #dfddc7; // #B0A974;
+  --background-color: #0a0b09; // #050605; // #32382E;
 }
