@@ -2,3 +2,16 @@
   color: var(--color);
   background-color: var(--background-color);
 }
+
+a {
+  display: inline;
+  text-decoration: none;
+}
+
+blockquote {
+  font-family: Alata, Helvetica;
+}
+
+table {
+  width: 70%;
+}
