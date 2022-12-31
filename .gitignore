@@ -1,10 +1,14 @@
 
+# junk files
 .DS_Store
-
 *.bak
 *.bak2
 *.tmp
 
+# 1st stage: bibtex2html intermediate files
 src/bib/bibliography.html
 src/bib/bibliography_bib.html
 
+# 2nd stage: build intermediate files
+src/bibliography_bib.html
+src/partials/_bib_table.html
