@@ -10,7 +10,8 @@ blockquote {
 }
 
 table {
-  width: 70%;
+  width: 100%;
+  padding: 2rem;
 }
 
 .bibtexnumber, .bibtexitem {
