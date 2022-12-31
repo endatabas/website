@@ -1,3 +1,7 @@
 *.bak
 *.bak2
 *.tmp
+
+src/bib/bibliography.html
+src/bib/bibliography_bib.html
+
