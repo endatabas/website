@@ -5,6 +5,7 @@
 (
     printf "\nGenerating bibliography...\n"
     cd $(dirname "$0")/../src/bib/
+    # -q is too quiet, -w doesn't actually stop on warning:
     bibtex2html -noabstract -nokeywords bibliography.bib
     perl -p0e 's/.*<table>/<table>/s' bibliography.html > ../../src/partials/_bib_table.html.tmp
     perl -p0e 's/<\/table>.*/<\/table>\n/s' ../../src/partials/_bib_table.html.tmp > ../../src/partials/_bib_table.html

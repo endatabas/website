@@ -13,7 +13,7 @@
 <h1>bibliography.bib</h1><a name="10.14778/3415478.3415534"></a><pre>
 @article{<a href="bibliography.html#10.14778/3415478.3415534">10.14778/3415478.3415534</a>,
   author = {Liu, Zhen Hua and Hammerschmidt, Beda and McMahon, Doug and Chang, Hui and Lu, Ying and Spiegel, Josh and Sosa, Alfonso Colunga and Suresh, Srikrishnan and Arora, Geeta and Arora, Vikas},
-  title = {Native JSON Datatype Support: Maturing SQL and NoSQL Convergence in Oracle Database},
+  title = {Native {JSON} Datatype Support: Maturing {SQL} and {NoSQL} Convergence in Oracle Database},
   year = {2020},
   issue_date = {August 2020},
   publisher = {VLDB Endowment},
@@ -24,7 +24,7 @@
   doi = {10.14778/3415478.3415534},
   abstract = {Both RDBMS and NoSQL database vendors have added varying degrees of support for storing and processing JSON data. Some vendors store JSON directly as text while others add new JSON type systems backed by binary encoding formats. The latter option is increasingly popular as it enables richer type systems and efficient query processing. In this paper, we present our new native JSON datatype and how it is fully integrated with the Oracle Database ecosystem to transform Oracle Database into a mature platform for serving both SQL and NoSQL style access paradigms. We show how our uniquely designed Oracle Binary JSON format (OSON) is able to speed up both OLAP and OLTP workloads over JSON documents.},
   journal = {Proc. VLDB Endow.},
-  month = {sep},
+  month = sep,
   pages = {3059–3071},
   numpages = {13}
 }
@@ -53,7 +53,7 @@
 <a name="Petkovi2017SQLJSONSP"></a><pre>
 @article{<a href="bibliography.html#Petkovi2017SQLJSONSP">Petkovi2017SQLJSONSP</a>,
   title = {SQL/JSON Standard: Properties and Deficiencies},
-  author = {Du{\vs}an Petkovi{\'c}},
+  author = {Du{\v s}an Petkovi{\'c}},
   journal = {Datenbank-Spektrum},
   year = {2017},
   volume = {17},
@@ -65,6 +65,9 @@
 @article{<a href="bibliography.html#Chamberlin2019ComparingSQLPlusPlusSQL2016">Chamberlin2019ComparingSQLPlusPlusSQL2016</a>,
   title = {Comparing Two SQL-Based Approaches for Querying JSON: SQL++ and SQL:2016},
   author = {Don Chamberlin},
+  journal = {Couchbase Resources},
+  year = {2019},
+  month = aug,
   url = {https://info.couchbase.com/rs/302-GJY-034/images/Comparing_Two_SQL_Based_Approaches_WP.pdf}
 }
 </pre>
@@ -73,7 +76,7 @@
 @techreport{<a href="bibliography.html#XQuery31">XQuery31</a>,
   author = {Jonathan Robie and Michael Dyck and Josh Spiegel},
   title = {XQuery 3.1: An XML Query Language},
-  month = <a href="#march">march</a>,
+  month = mar,
   note = {https://www.w3.org/TR/xquery-31/},
   year = {2017},
   type = {Recommendation},
@@ -82,12 +85,13 @@
 </pre>
 
 <a name="Chamberlin2003XQuery"></a><pre>
-@unpublished{<a href="bibliography.html#Chamberlin2003XQuery">Chamberlin2003XQuery</a>,
+@misc{<a href="bibliography.html#Chamberlin2003XQuery">Chamberlin2003XQuery</a>,
   author = {Don Chamberlin},
-  title = {XQuery: A Query Language for XML (slides)},
-  month = <a href="#june">june</a>,
+  title = {XQuery: A Query Language for {XML} (slides)},
+  month = jun,
   year = {2003},
-  url = {https://cseweb.ucsd.edu/classes/wi19/cse232B-a/papers/sigmod03_xquery.pdf}
+  url = {https://cseweb.ucsd.edu/classes/wi19/cse232B-a/papers/sigmod03_xquery.pdf},
+  note = {Accessed: {2023–01-01}}
 }
 </pre>
 
@@ -106,7 +110,7 @@
   doi = {10.1007/s00778-002-0074-9},
   abstract = {Relational database systems have traditionally optimized for I/O performance and organized records sequentially on disk pages using the N-ary Storage Model (NSM) (a.k.a., slotted pages). Recent research, however, indicates that cache utilization and performance is becoming increasingly important on modern platforms. In this paper, we first demonstrate that in-page data placement is the key to high cache performance and that NSM exhibits low cache utilization on modern platforms. Next, we propose a new data organization model called PAX (Partition Attributes Across), that significantly improves cache performance by grouping together all values of each attribute within each page. Because PAX only affects layout inside the pages, it incurs no storage penalty and does not affect I/O behavior. According to our experimental results (which were obtained without using any indices on the participating relations), when compared to NSM: (a) PAX exhibits superior cache and memory bandwidth utilization, saving at least 75\% of NSM's stall time due to data cache accesses; (b) range selection queries and updates on memory-resident relations execute 1725\% faster; and (c) TPC-H queries involving I/O execute 1148\% faster. Finally, we show that PAX performs well across different memory system designs.},
   journal = {The VLDB Journal},
-  month = {nov},
+  month = nov,
   pages = {198–215},
   numpages = {18},
   keywords = {Disk page layout, Cache-conscious database systems, Relational data placement}
@@ -119,7 +123,7 @@
   author = {Paul McJones},
   publisher = {Computer History Museum},
   url = {https://archive.computerhistory.org/resources/access/text/2015/06/102702111-05-01-acc.pdf},
-  month = <a href="#july">july</a>,
+  month = jul,
   year = {2009}
 }
 </pre>
