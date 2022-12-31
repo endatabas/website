@@ -1,8 +1,3 @@
-:root {
-  color: var(--color);
-  background-color: var(--background-color);
-}
-
 a {
   display: inline;
   text-decoration: none;
@@ -10,8 +5,14 @@ a {
 
 blockquote {
   font-family: Alata, Helvetica;
+  font-size: 0.8rem;
+  line-height: normal;
 }
 
 table {
   width: 70%;
+}
+
+.bibtexnumber, .bibtexitem {
+  font-size: 1.0rem;
 }

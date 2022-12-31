@@ -2,29 +2,19 @@
 
 #set -x
 #set -e
-
-HEADER=`cat $(dirname "$0")/../docs/partials/_header.html`
-HEADER_FILE=`realpath $(dirname "$0")/../docs/partials/_header.html`
-
 (
     printf "\nGenerating bibliography...\n"
-    cd $(dirname "$0")/../docs/bib/
-    bibtex2html bibliography.bib
-    # MacOS uses BSD sed, which requires a param for -i, so...
-    sed 's/<title>bibliography<\/title>/<title>bibliography<\/title>\n<link rel="stylesheet" href="\/resources\/css\/dark.css" media="(prefers-color-scheme: dark)" \/>\n<link rel="stylesheet" href="\/resources\/css\/light.css" media="(prefers-color-scheme: light)" \/>\n<link rel="stylesheet" href="\/resources\/css\/beta2.css" \/>\n<link rel="stylesheet" href="\/resources\/css\/bib.css" \/>/g' bibliography.html > bibliography_themed.html
-    mv bibliography.html bibliography.html.bak
-    mv bibliography_themed.html bibliography.html
+    cd $(dirname "$0")/../src/bib/
+    bibtex2html -noabstract -nokeywords bibliography.bib
+    perl -p0e 's/.*<table>/<table>/s' bibliography.html > ../../src/partials/_bib_table.html.tmp
+    perl -p0e 's/<\/table>.*/<\/table>\n/s' ../../src/partials/_bib_table.html.tmp > ../../src/partials/_bib_table.html
+    perl -p0e 's/<title>bibliography.bib<\/title>/<title>bibliography.bib<\/title>\n<link rel="stylesheet" href="\/resources\/css\/dark.css" media="(prefers-color-scheme: dark)" \/>\n<link rel="stylesheet" href="\/resources\/css\/light.css" media="(prefers-color-scheme: light)" \/>\n<link rel="stylesheet" href="\/resources\/css\/bib_bib.css" \/>/g' bibliography_bib.html > ../../src/bibliography_bib.html
 )
 
-printf "\nReplacing bib tokens...\n"
 (
-    # "s/<body>/<body color-mode=\"user\">$HEADER/g"
-    cd $(dirname "$0")/../docs/bib/
-    echo $HEADER_FILE
-    sed "/<body>/{
-        s/<body>/<body color-mode=\"user\">/g
-        r $HEADER_FILE
-    }" bibliography.html > bibliography_tokenized.html
-    mv bibliography.html bibliography.html.bak2
-    mv bibliography_tokenized.html bibliography.html
+    printf "\nM4 Replacing...\n"
+    cd $(dirname "$0")/../
+    m4 -I "./src/partials/" src/beta2.html > docs/beta2.html
+    m4 -I "./src/partials/" src/bibliography.html > docs/bibliography.html
+    m4 -I "./src/partials/" src/bibliography_bib.html > docs/bibliography_bib.html
 )

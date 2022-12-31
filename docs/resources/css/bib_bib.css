@@ -1,0 +1,10 @@
+/* This file is for bibliography_bib.html, which contains the bib source
+   more or less verbatim. */
+:root {
+  color: var(--color);
+  background-color: var(--background-color);
+}
+
+a {
+  color: #00aa55;
+}
