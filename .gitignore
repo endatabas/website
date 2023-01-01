@@ -5,10 +5,17 @@
 *.bak2
 *.tmp
 
+# 0th stage: bib2bib intermediate files
+src/bib/bibliography.bib
+
 # 1st stage: bibtex2html intermediate files
+src/bib/references.html
+src/bib/references_bib.html
 src/bib/bibliography.html
 src/bib/bibliography_bib.html
 
 # 2nd stage: build intermediate files
+src/references_bib.html
+src/partials/_ref_table.html
 src/bibliography_bib.html
 src/partials/_bib_table.html

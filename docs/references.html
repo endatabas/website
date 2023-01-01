@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <script>
+     // If 'prefers-color-scheme' is not supported, fall back to light mode.
+     // In this case, light.css will be downloaded with 'highest' priority.
+     if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+       document.documentElement.style.display = 'none';
+       document.head.insertAdjacentHTML(
+         'beforeend',
+         '<link rel="stylesheet" href="resources/css/light.css" onload="document.documentElement.style.display = \'\'">',
+       );
+     }
+    </script>
+    <!--  // following advice from: -->
+    <!--  // https://web.dev/prefers-color-scheme/ -->
+    <link rel="stylesheet" href="resources/css/dark.css" media="(prefers-color-scheme: dark)" />
+    <link rel="stylesheet" href="resources/css/light.css" media="(prefers-color-scheme: light)" />
+    <link rel="stylesheet" href="resources/css/beta2.css">
+    <link rel="stylesheet" href="/resources/css/bib.css" />
+
+    <meta charset="utf-8">
+    <meta name="description" content="endatabas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>endatabas | Dynamic SQL in the Clouds.</title>
+  </head>
+
+  <body color-mode="user">
+      <header>
+    <h1 id="home" class="logo"><a href="/beta2.html">end<span class="letter-box">a</span><span class="letter-box">t</span><span class="letter-box">a</span>b<span class="letter-box">a</span><span class="letter-box">s</span></a></h1>
+    <nav>
+      <a href="#">☰</a>
+      <ul>
+        <li><a href="/references.html">References</a></li>
+        <li><a href="/bibliography.html">Bibliography</a></li>
+        <!--     <li><a href="#docs">Docs</a></li> -->
+        <!--     <li><a href="#product">Product</a></li> -->
+        <!--     <li><a href="#company">Company</a></li> -->
+        <!--     <li><a href="#community">Community</a></li> -->
+        <!--     <li><a href="#sign-in"><b>Sign&nbsp;In</b></a></li> -->
+      </ul>
+    </nav>
+  </header>
+
+
+    <main>
+      <article>
+        <section>
+          <table>
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="10.1145/318898.318923">1</a>]
+</td>
+<td class="bibtexitem">
+George&nbsp;P. Copeland and Setrag&nbsp;N. Khoshafian.
+ A decomposition storage model.
+ In <em>Proceedings of the 1985 ACM SIGMOD International Conference
+  on Management of Data</em>, SIGMOD '85, page 268–279, New York, NY, USA, 1985.
+  Association for Computing Machinery.
+[&nbsp;<a href="references_bib.html#10.1145/318898.318923">bib</a>&nbsp;| 
+<a href="http://dx.doi.org/10.1145/318898.318923">DOI</a>&nbsp;| 
+<a href="https://doi.org/10.1145/318898.318923">http</a>&nbsp;]
+
+</td>
+</tr>
+</table>
+
+        </section>
+        <section class="invisible">
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      Copyright © 2023 Endatabas AB
+    </footer>
+  </body>
+
+</html>
