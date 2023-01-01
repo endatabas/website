@@ -148,6 +148,19 @@ header {
   background: transparent;
 }
 
+.profile {
+  display: flex;
+  padding: 1.2rem;
+}
+
+.profile > img {
+  padding-right: 1.2rem;
+}
+
+.profile > .description {
+  display: block;
+}
+
 body > footer {
     color: var(--color);
     top: 100vh;
