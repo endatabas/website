@@ -9,24 +9,32 @@
     }
 
     style_bib_bib () {
-        perl -p0e "s/<title>$1.bib<\/title>/<title>$1.bib<\/title>\n<link rel=\"stylesheet\" href=\"\/resources\/css\/dark.css\" media=\"(prefers-color-scheme: dark)\" \/>\n<link rel=\"stylesheet\" href=\"\/resources\/css\/light.css\" media=\"(prefers-color-scheme: light)\" \/>\n<link rel=\"stylesheet\" href=\"\/resources\/css\/bib_bib.css\" \/>/g" $1_bib.html > ../../src/$1_bib.html
+        TITLE="<title>$1.bib<\/title>"
+        DARK_CSS='<link rel="stylesheet" href="\/resources\/css\/dark.css" media="(prefers-color-scheme: dark)" \/>'
+        LIGHT_CSS='<link rel="stylesheet" href="\/resources\/css\/light.css" media="(prefers-color-scheme: light)" \/>'
+        BIBBIB_CSS='<link rel="stylesheet" href="\/resources\/css\/bib_bib.css" \/>'
+        perl -p0e "s/$TITLE/$TITLE\n$DARK_CSS\n$LIGHT_CSS\n$BIBBIB_CSS/g" $1_bib.html > ../../src/$1_bib.html
     }
 
-    printf "\nGenerating bibliography...\n"
     cd $(dirname "$0")/../src/bib/
+
+    printf "\n#### Bib2bib combining references + research...\n"
     bib2bib -ob bibliography.bib references.bib research.bib
+
+    printf "\n#### Generating references...\n"
     # -q is too quiet, -w doesn't actually stop on warning:
     bibtex2html -a -noabstract -nokeywords references.bib
     strip_table "references.html" "_ref_table.html"
     style_bib_bib "references"
 
+    printf "\n#### Generating bibliography...\n"
     bibtex2html -a -noabstract -nokeywords bibliography.bib
     strip_table "bibliography.html" "_bib_table.html"
     style_bib_bib "bibliography"
 )
 
 (
-    printf "\nM4 Replacing...\n"
+    printf "\n#### M4 macros...\n"
     cd $(dirname "$0")/../
     m4 -I "./src/partials/" src/beta2.html > docs/beta2.html
     m4 -I "./src/partials/" src/references.html > docs/references.html
@@ -34,3 +42,5 @@
     m4 -I "./src/partials/" src/bibliography.html > docs/bibliography.html
     m4 -I "./src/partials/" src/bibliography_bib.html > docs/bibliography_bib.html
 )
+
+printf "#### ...done.\n"
