@@ -10,7 +10,11 @@
 </head>
 
 <body>
-<h1>references.bib</h1><a name="10.1145/318898.318923"></a><pre>
+<h1>references.bib</h1><pre>
+@comment{{Prefer citations from https://dl.acm.org/, if available. DOI as citekey, if available.}}
+</pre>
+
+<a name="10.1145/318898.318923"></a><pre>
 @inproceedings{<a href="references.html#10.1145/318898.318923">10.1145/318898.318923</a>,
   author = {Copeland, George P. and Khoshafian, Setrag N.},
   title = {A Decomposition Storage Model},
@@ -25,6 +29,261 @@
   numpages = {12},
   location = {Austin, Texas, USA},
   series = {SIGMOD '85}
+}
+</pre>
+
+<a name="10.1109/69.755613"></a><pre>
+@article{<a href="references.html#10.1109/69.755613">10.1109/69.755613</a>,
+  author = {Jensen, Christian S. and Snodgrass, Richard Thomas},
+  title = {Temporal Data Management},
+  year = {1999},
+  issue_date = {January 1999},
+  publisher = {IEEE Educational Activities Department},
+  address = {USA},
+  volume = {11},
+  number = {1},
+  issn = {1041-4347},
+  url = {https://doi.org/10.1109/69.755613},
+  doi = {10.1109/69.755613},
+  abstract = {A wide range of database applications manage time-varying information. Existing database technology currently provides little support for managing such data. The research area of temporal databases has made important contributions in characterizing the semantics of such information and in providing expressive and efficient means to model, store, and query temporal data. This paper introduces the reader to temporal data management, surveys state-of-the-art solutions to challenging aspects of temporal data management, and points to research directions.},
+  journal = {IEEE Trans. on Knowl. and Data Eng.},
+  month = jan,
+  pages = {36–44},
+  numpages = {9},
+  keywords = {temporal database, SQL, time-constrained database, Query language, TSQL2, transaction time, valid time., temporal data model, user-defined time}
+}
+</pre>
+
+<a name="10.5555/320037"></a><pre>
+@book{<a href="references.html#10.5555/320037">10.5555/320037</a>,
+  author = {Snodgrass, Richard Thomas},
+  title = {Developing Time-Oriented Database Applications in {SQL}},
+  year = {1999},
+  isbn = {1558604367},
+  publisher = {Morgan Kaufmann Publishers Inc.},
+  address = {San Francisco, CA, USA}
+}
+</pre>
+
+<a name="10.1145/3180143"></a><pre>
+@article{<a href="references.html#10.1145/3180143">10.1145/3180143</a>,
+  author = {Ngo, Hung Q. and Porat, Ely and R\'{e}, Christopher and Rudra, Atri},
+  title = {Worst-Case Optimal Join Algorithms},
+  year = {2018},
+  issue_date = {June 2018},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {65},
+  number = {3},
+  issn = {0004-5411},
+  url = {https://doi.org/10.1145/3180143},
+  doi = {10.1145/3180143},
+  abstract = {Efficient join processing is one of the most fundamental and well-studied tasks in database research. In this work, we examine algorithms for natural join queries over many relations and describe a new algorithm to process these queries optimally in terms of worst-case data complexity. Our result builds on recent work by Atserias, Grohe, and Marx, who gave bounds on the size of a natural join query in terms of the sizes of the individual relations in the body of the query. These bounds, however, are not constructive: they rely on Shearer’s entropy inequality, which is information-theoretic. Thus, the previous results leave open the question of whether there exist algorithms whose runtimes achieve these optimal bounds. An answer to this question may be interesting to database practice, as we show in this article that any project-join style plans, such as ones typically employed in a relational database management system, are asymptotically slower than the optimal for some queries. We present an algorithm whose runtime is worst-case optimal for all natural join queries. Our result may be of independent interest, as our algorithm also yields a constructive proof of the general fractional cover bound by Atserias, Grohe, and Marx without using Shearer’s inequality. This bound implies two famous inequalities in geometry: the Loomis-Whitney inequality and its generalization, the Bollob\'{a}s-Thomason inequality. Hence, our results algorithmically prove these inequalities as well. Finally, we discuss how our algorithm can be used to evaluate full conjunctive queries optimally, to compute a relaxed notion of joins and to optimally (in the worst-case) enumerate all induced copies of a fixed subgraph inside of a given large graph.},
+  journal = {J. ACM},
+  month = mar,
+  articleno = {16},
+  numpages = {40},
+  keywords = {Join Algorithms, fractional cover bound, Bollob\'{a}s-Thomason inequality, Loomis-Whitney inequality}
+}
+</pre>
+
+<a name="10.1145/2590989.2590991"></a><pre>
+@article{<a href="references.html#10.1145/2590989.2590991">10.1145/2590989.2590991</a>,
+  author = {Ngo, Hung Q and R\'{e}, Christopher and Rudra, Atri},
+  title = {Skew Strikes Back: New Developments in the Theory of Join Algorithms},
+  year = {2014},
+  issue_date = {December 2013},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {42},
+  number = {4},
+  issn = {0163-5808},
+  url = {https://doi.org/10.1145/2590989.2590991},
+  doi = {10.1145/2590989.2590991},
+  journal = {SIGMOD Rec.},
+  month = feb,
+  pages = {5–16},
+  numpages = {12}
+}
+</pre>
+
+<a name="10.1145/2213836.2213946"></a><pre>
+@inproceedings{<a href="references.html#10.1145/2213836.2213946">10.1145/2213836.2213946</a>,
+  author = {Sikka, Vishal and F\"{a}rber, Franz and Lehner, Wolfgang and Cha, Sang Kyun and Peh, Thomas and Bornh\"{o}vd, Christof},
+  title = {Efficient Transaction Processing in {SAP} {HANA} Database: The End of a Column Store Myth},
+  year = {2012},
+  isbn = {9781450312479},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/2213836.2213946},
+  doi = {10.1145/2213836.2213946},
+  abstract = {The SAP HANA database is the core of SAP's new data management platform. The overall goal of the SAP HANA database is to provide a generic but powerful system for different query scenarios, both transactional and analytical, on the same data representation within a highly scalable execution environment. Within this paper, we highlight the main features that differentiate the SAP HANA database from classical relational database engines. Therefore, we outline the general architecture and design criteria of the SAP HANA in a first step. In a second step, we challenge the common belief that column store data structures are only superior in analytical workloads and not well suited for transactional workloads. We outline the concept of record life cycle management to use different storage formats for the different stages of a record. We not only discuss the general concept but also dive into some of the details of how to efficiently propagate records through their life cycle and moving database entries from write-optimized to read-optimized storage formats. In summary, the paper aims at illustrating how the SAP HANA database is able to efficiently work in analytical as well as transactional workload environments.},
+  booktitle = {Proceedings of the 2012 ACM SIGMOD International Conference on Management of Data},
+  pages = {731–742},
+  numpages = {12},
+  keywords = {column store, transaction processing, sap hana},
+  location = {Scottsdale, Arizona, USA},
+  series = {SIGMOD '12}
+}
+</pre>
+
+<a name="10.14778/3436905.3436913"></a><pre>
+@article{<a href="references.html#10.14778/3436905.3436913">10.14778/3436905.3436913</a>,
+  author = {Li, Tianyu and Butrovich, Matthew and Ngom, Amadou and Lim, Wan Shen and McKinney, Wes and Pavlo, Andrew},
+  title = {Mainlining Databases: Supporting Fast Transactional Workloads on Universal Columnar Data File Formats},
+  year = {2021},
+  issue_date = {December 2020},
+  publisher = {VLDB Endowment},
+  volume = {14},
+  number = {4},
+  issn = {2150-8097},
+  url = {https://doi.org/10.14778/3436905.3436913},
+  doi = {10.14778/3436905.3436913},
+  abstract = {The proliferation of modern data processing tools has given rise to open-source columnar data formats. These formats help organizations avoid repeated conversion of data to a new format for each application. However, these formats are read-only, and organizations must use a heavy-weight transformation process to load data from on-line transactional processing (OLTP) systems. As a result, DBMSs often fail to take advantage of full network bandwidth when transferring data. We aim to reduce or even eliminate this overhead by developing a storage architecture for in-memory database management systems (DBMSs) that is aware of the eventual usage of its data and emits columnar storage blocks in a universal open-source format. We introduce relaxations to common analytical data formats to efficiently update records and rely on a lightweight transformation process to convert blocks to a read-optimized layout when they are cold. We also describe how to access data from third-party analytical tools with minimal serialization overhead. We implemented our storage engine based on the Apache Arrow format and integrated it into the NoisePage DBMS to evaluate our work. Our experiments show that our approach achieves comparable performance with dedicated OLTP DBMSs while enabling orders-of-magnitude faster data exports to external data science and machine learning tools than existing methods.},
+  journal = {Proc. VLDB Endow.},
+  month = feb,
+  pages = {534–546},
+  numpages = {13}
+}
+</pre>
+
+<a name="DBLP:conf/cidr/BonczZN05"></a><pre>
+@inproceedings{<a href="references.html#DBLP:conf/cidr/BonczZN05">DBLP:conf/cidr/BonczZN05</a>,
+  title = {{MonetDB/X100}: Hyper-Pipelining Query Execution},
+  author = {Boncz, Peter A. and Zukowski, Marcin and Nes, Niels},
+  booktitle = {Second Biennial Conference on Innovative Data Systems Research, {CIDR}
+               2005, Asilomar, CA, USA, January 4-7, 2005, Online Proceedings},
+  pages = {225--237},
+  publisher = {www.cidrdb.org},
+  year = {2005},
+  url = {<a href="http://cidrdb.org/cidr2005/papers/P19.pdf">http://cidrdb.org/cidr2005/papers/P19.pdf</a>},
+  timestamp = {Mon, 18 Jul 2022 17:13:00 +0200},
+  biburl = {https://dblp.org/rec/conf/cidr/BonczZN05.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+</pre>
+
+<a name="10.1145/3035918.3056101"></a><pre>
+@inproceedings{<a href="references.html#10.1145/3035918.3056101">10.1145/3035918.3056101</a>,
+  author = {Verbitski, Alexandre and Gupta, Anurag and Saha, Debanjan and Brahmadesam, Murali and Gupta, Kamal and Mittal, Raman and Krishnamurthy, Sailesh and Maurice, Sandor and Kharatishvili, Tengiz and Bao, Xiaofeng},
+  title = {{Amazon} {Aurora}: Design Considerations for High Throughput Cloud-Native Relational Databases},
+  year = {2017},
+  isbn = {9781450341974},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3035918.3056101},
+  doi = {10.1145/3035918.3056101},
+  abstract = {Amazon Aurora is a relational database service for OLTP workloads offered as part of Amazon Web Services (AWS). In this paper, we describe the architecture of Aurora and the design considerations leading to that architecture. We believe the central constraint in high throughput data processing has moved from compute and storage to the network. Aurora brings a novel architecture to the relational database to address this constraint, most notably by pushing redo processing to a multi-tenant scale-out storage service, purpose-built for Aurora. We describe how doing so not only reduces network traffic, but also allows for fast crash recovery, failovers to replicas without loss of data, and fault-tolerant, self-healing storage. We then describe how Aurora achieves consensus on durable state across numerous storage nodes using an efficient asynchronous scheme, avoiding expensive and chatty recovery protocols. Finally, having operated Aurora as a production service for over 18 months, we share the lessons we have learnt from our customers on what modern cloud applications expect from databases.},
+  booktitle = {Proceedings of the 2017 ACM International Conference on Management of Data},
+  pages = {1041–1052},
+  numpages = {12},
+  keywords = {recovery, quorum models, databases, log processing, performance, replication, distributed systems, oltp},
+  location = {Chicago, Illinois, USA},
+  series = {SIGMOD '17}
+}
+</pre>
+
+<a name="10.1007/s00778-002-0074-9"></a><pre>
+@article{<a href="references.html#10.1007/s00778-002-0074-9">10.1007/s00778-002-0074-9</a>,
+  author = {Ailamaki, Anastassia and DeWitt, David J. and Hill, Mark D.},
+  title = {Data Page Layouts for Relational Databases on Deep Memory Hierarchies},
+  year = {2002},
+  issue_date = {November 2002},
+  publisher = {Springer-Verlag},
+  address = {Berlin, Heidelberg},
+  volume = {11},
+  number = {3},
+  issn = {1066-8888},
+  url = {https://doi.org/10.1007/s00778-002-0074-9},
+  doi = {10.1007/s00778-002-0074-9},
+  abstract = {Relational database systems have traditionally optimized for I/O performance and organized records sequentially on disk pages using the N-ary Storage Model (NSM) (a.k.a., slotted pages). Recent research, however, indicates that cache utilization and performance is becoming increasingly important on modern platforms. In this paper, we first demonstrate that in-page data placement is the key to high cache performance and that NSM exhibits low cache utilization on modern platforms. Next, we propose a new data organization model called PAX (Partition Attributes Across), that significantly improves cache performance by grouping together all values of each attribute within each page. Because PAX only affects layout inside the pages, it incurs no storage penalty and does not affect I/O behavior. According to our experimental results (which were obtained without using any indices on the participating relations), when compared to NSM: (a) PAX exhibits superior cache and memory bandwidth utilization, saving at least 75\% of NSM's stall time due to data cache accesses; (b) range selection queries and updates on memory-resident relations execute 1725\% faster; and (c) TPC-H queries involving I/O execute 1148\% faster. Finally, we show that PAX performs well across different memory system designs.},
+  journal = {The VLDB Journal},
+  month = nov,
+  pages = {198–215},
+  numpages = {18},
+  keywords = {Disk page layout, Relational data placement, Cache-conscious database systems}
+}
+</pre>
+
+<a name="ISO/IEC-9075-2:1999"></a><pre>
+@techreport{<a href="references.html#ISO/IEC-9075-2:1999">ISO/IEC-9075-2:1999</a>,
+  author = {ISO/IEC 9075-2:1999},
+  title = {Information technology — Database languages — {SQL} — Part 2: Foundation ({SQL/Foundation})},
+  note = {https://www.iso.org/standard/26197.html},
+  year = {1999},
+  month = dec,
+  type = {Standard},
+  institution = {ISO/IEC}
+}
+</pre>
+
+<a name="ISO/IEC-9075-2:2003"></a><pre>
+@techreport{<a href="references.html#ISO/IEC-9075-2:2003">ISO/IEC-9075-2:2003</a>,
+  author = {ISO/IEC 9075-2:2003},
+  title = {Information technology — Database languages — {SQL} — Part 2: Foundation ({SQL/Foundation})},
+  note = {https://www.iso.org/standard/34133.html},
+  year = {2003},
+  month = dec,
+  type = {Standard},
+  institution = {ISO/IEC}
+}
+</pre>
+
+<a name="ISO/IEC-19075-2:2021"></a><pre>
+@techreport{<a href="references.html#ISO/IEC-19075-2:2021">ISO/IEC-19075-2:2021</a>,
+  author = {ISO/IEC 19075-2:2021},
+  title = {Information technology — Guidance for the use of database language {SQL} — Part 2: Time-related information},
+  note = {https://www.iso.org/standard/78933.html},
+  year = {2021},
+  month = aug,
+  type = {Standard},
+  institution = {ISO/IEC}
+}
+</pre>
+
+<a name="10.1145/3318464.3380579"></a><pre>
+@inproceedings{<a href="references.html#10.1145/3318464.3380579">10.1145/3318464.3380579</a>,
+  author = {Nathan, Vikram and Ding, Jialin and Alizadeh, Mohammad and Kraska, Tim},
+  title = {Learning Multi-Dimensional Indexes},
+  year = {2020},
+  isbn = {9781450367356},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3318464.3380579},
+  doi = {10.1145/3318464.3380579},
+  abstract = {Scanning and filtering over multi-dimensional tables are key operations in modern analytical database engines. To optimize the performance of these operations, databases often create clustered indexes over a single dimension or multi-dimensional indexes such as R-Trees, or use complex sort orders (e.g., Z-ordering). However, these schemes are often hard to tune and their performance is inconsistent across different datasets and queries. In this paper, we introduce Flood, a multi-dimensional in-memory read-optimized index that automatically adapts itself to a particular dataset and workload by jointly optimizing the index structure and data storage layout. Flood achieves up to three orders of magnitude faster performance for range scans with predicates than state-of-the-art multi-dimensional indexes or sort orders on real-world datasets and workloads. Our work serves as a building block towards an end-to-end learned database system.},
+  booktitle = {Proceedings of the 2020 ACM SIGMOD International Conference on Management of Data},
+  pages = {985–1000},
+  numpages = {16},
+  keywords = {in-memory, multi-dimensional, indexing, databases, primary index},
+  location = {Portland, OR, USA},
+  series = {SIGMOD '20}
+}
+</pre>
+
+<a name="YouTube-YjAVsvYGbuU"></a><pre>
+@misc{<a href="references.html#YouTube-YjAVsvYGbuU">YouTube-YjAVsvYGbuU</a>,
+  author = {Råberg, Håkan},
+  title = {The Design and Implementation of a Bitemporal {DBMS}},
+  url = {https://www.youtube.com/watch?v=YjAVsvYGbuU},
+  year = {2019},
+  month = sep,
+  keywords = {temporal, bitemporal, z-curves},
+  location = {Helsinki, Finland},
+  series = {ClojuTRE 2019}
+}
+</pre>
+
+<a name="YouTube-Px-7TlceM5A"></a><pre>
+@misc{<a href="references.html#YouTube-Px-7TlceM5A">YouTube-Px-7TlceM5A</a>,
+  author = {Råberg, Håkan},
+  title = {Light and Adaptive Indexing for Immutable Databases},
+  url = {https://www.youtube.com/watch?v=Px-7TlceM5A},
+  year = {2022},
+  month = sep,
+  keywords = {machine learning, adaptive indexes, databases, indexing, separation of storage from compute},
+  location = {St. Louis, MO, USA},
+  series = {Strange Loop 2020}
 }
 </pre>
 
