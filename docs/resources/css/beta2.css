@@ -1,15 +1,27 @@
-@font-face {
-    font-family: 'Special Elite';
-    src: url('../fonts/Special_Elite/SpecialElite-Regular.ttf') format('truetype');
-}
+/* General: Alata-Regular.ttf does not have web font equivalents */
 @font-face {
     font-family: 'Alata';
-    src: url('../fonts/Alata/Alata-Regular.ttf') format('truetype');
+    src: url('/resources/fonts/Alata/Alata-Regular.ttf') format('truetype');
 }
+
+/* Whitepaper: SpecialElite-Regular.ttf does not have web font equivalents */
 @font-face {
-    font-family: 'Share Tech Mono';
-    src: url('../fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf') format('truetype');
+  font-family: 'Special Elite';
+  src: url('/resources/fonts/Special_Elite/SpecialElite-Regular.ttf') format('truetype');
 }
+
+/* Logo: share-tech-mono-regular - latin */
+@font-face {
+  font-family: 'Share Tech Mono';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/resources/fonts/Share_Tech_Mono/share-tech-mono-v15-latin-regular.eot');
+  src: url('/resources/fonts/Share_Tech_Mono/share-tech-mono-v15-latin-regular.eot') format('embedded-opentype'),
+  url('/resources/fonts/Share_Tech_Mono/share-tech-mono-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('/resources/fonts/Share_Tech_Mono/share-tech-mono-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
+  url('/resources/fonts/Share_Tech_Mono/share-tech-mono-v15-latin-regular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
 
 /* MVP based reset */
 
