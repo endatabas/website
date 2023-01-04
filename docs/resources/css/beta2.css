@@ -186,6 +186,16 @@ main {
     padding: 0 3rem;
 }
 
+main > h2 {
+  /* hide h2 on homepage unless printed */
+  display: none;
+}
+
+main > article > section > h3 {
+  /* hide h3 on homepage unless printed */
+  display: none;
+}
+
 main h2 {
   padding: 1rem;
   color: var(--color);
@@ -196,7 +206,7 @@ main h2 {
 }
 
 main article section > p {
-  padding: 1rem;
+  padding: 0.4rem;
   color: var(--color);
   background-color: var(--background-color);
   font-size: 1.25rem;
@@ -395,32 +405,66 @@ blockquote footer a {
 }
 
 @media print {
-    main h2 {
-        height: 25rem;
-        background-image: url('../images/background19.png');
-        background-size: cover;
-        background-position: top center;
-        background-repeat: no-repeat;
-        background-filter: opacity(0.6);
-        -webkit-print-color-adjust:exact !important;
-        print-color-adjust:exact !important;
-    }
+  @page {
+    margin: 0;
+  }
 
-    blockquote {
-        padding: 0 3rem;
-        font-size: 1rem;
-    }
+  body > header > nav {
+    display: none;
+  }
 
-    section {
-        margin: 0;
-    }
+  main > h2 {
+    /* hidden on homepage unless printed */
+    display: block;
+  }
 
-    h3 {
-        border-bottom: 1px solid #CCC;
-    }
+  main h2 {
+    height: 25rem;
+    padding: 2rem;
+    margin: 2rem;
+    line-height: 1.2;
+    background-image: url('/resources/images/background19.jpg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-filter: opacity(0.6);
+    -webkit-print-color-adjust:exact !important;
+    print-color-adjust:exact !important;
+  }
 
-    body > footer {
-        position: fixed;
-        bottom: 0;
-    }
+  article {
+    margin: 1rem;
+    padding: 0rem;
+    display: block;
+  }
+
+  main article section > p {
+    padding: 0.2rem 0;
+    font-size: 0.8rem;
+    text-align: justify;
+  }
+
+  blockquote {
+    padding: 0 3rem;
+    font-size: 1rem;
+  }
+
+  section {
+    margin: 0;
+  }
+
+  main > article > section > h3 {
+    /* hidden on homepage unless printed */
+    display: block;
+  }
+
+  h3 {
+    border-bottom: 1px solid #CCC;
+  }
+
+  body > footer {
+    display: none;
+    position: fixed;
+    bottom: 0;
+  }
 }
