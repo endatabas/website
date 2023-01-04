@@ -290,28 +290,28 @@ blockquote {
 }
 
 blockquote pre {
-    margin-left: 2rem;
-    font-family: 'Special Elite';
+  margin-left: 2rem;
+  font-family: 'Special Elite';
 }
 
 blockquote footer {
-    text-align: right;
-    font-family: Alata;
-    font-size: 1rem;
-    margin: 0;
+  text-align: right;
+  font-family: Alata;
+  font-size: 1rem;
+  margin: 0;
 }
 
 blockquote footer em {
-    font-weight: normal;
-    font-style: normal;
-    padding: 0;
-    margin: 0;
-    font-size: 0.8rem;
-    display: block;
+  font-weight: normal;
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+  font-size: 0.8rem;
+  display: block;
 }
 
 blockquote footer a {
-    color: inherit;
+  color: inherit;
 }
 
 @media screen and (max-width:915px) {
