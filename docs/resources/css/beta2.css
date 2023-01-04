@@ -191,6 +191,8 @@ main h2 {
   color: var(--color);
   background-color: var(--background-color);
   font-size: 3rem;
+  margin: 0;
+  line-height: 1;
 }
 
 main article section > p {
@@ -316,7 +318,7 @@ blockquote footer a {
     flex: 0 1 80%;
   }
 
-  header, section, h2 {
+  header, section {
     margin: 2rem 0;
   }
 
@@ -370,7 +372,7 @@ blockquote footer a {
         padding: 0.5rem;
     }
 
-  header, section, h2 {
+  header, section {
     margin: 0.5rem 0;
   }
 
