@@ -36,7 +36,7 @@
 (
     printf "\n#### M4 macros...\n"
     cd $(dirname "$0")/../
-    m4 -I "./src/partials/" src/beta2.html > docs/beta2.html
+    m4 -I "./src/partials/" src/index.html > docs/index.html
     m4 -I "./src/partials/" src/references.html > docs/references.html
     m4 -I "./src/partials/" src/references_bib.html > docs/references_bib.html
     m4 -I "./src/partials/" src/bibliography.html > docs/bibliography.html
