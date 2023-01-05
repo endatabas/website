@@ -165,7 +165,7 @@ header {
   padding: 1.2rem;
 }
 
-.profile > img {
+.profile > .photo {
   padding-right: 1.2rem;
 }
 
@@ -376,32 +376,45 @@ blockquote footer a {
     main {
         text-align: center;
     }
+
+  .profile {
+    flex-flow: row wrap;
+  }
+
+  .profile > .photo {
+    flex: 0 1 80%;
+  }
+
+  .profile > .description {
+    flex: 0 1 80%;
+  }
 }
 
 @media screen and (max-width:360px) {
-    main {
-        padding: 0.5rem;
-    }
+  main {
+    padding: 0.5rem;
+  }
 
   header, section {
     margin: 0.5rem 0;
   }
 
-    header {
-        margin-top: 0;
-    }
+  header {
+    margin-top: 0;
+  }
 
-    .logo {
-        font-size: 3rem;
-    }
+  .logo {
+    font-size: 3rem;
+  }
 
-    nav > a:hover + ul  {
-        top: 2.5rem;
-    }
+  nav > a:hover + ul  {
+    top: 2.5rem;
+  }
 
-    nav > a {
-        font-size: 1.5rem;
-    }
+  nav > a {
+    font-size: 1.5rem;
+  }
+
 }
 
 @media print {
