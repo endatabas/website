@@ -174,12 +174,10 @@ header {
 
 .profile > .photo {
   padding-right: 1.2rem;
-  flex: 0 1 80%;
 }
 
 .profile > .description {
   min-width: 17rem;
-  flex: 0 1 80%;
 }
 
 body > footer {
