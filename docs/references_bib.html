@@ -108,46 +108,6 @@
 }
 </pre>
 
-<a name="10.1145/2590989.2590991"></a><pre>
-@article{<a href="references.html#10.1145/2590989.2590991">10.1145/2590989.2590991</a>,
-  author = {Ngo, Hung Q and R\'{e}, Christopher and Rudra, Atri},
-  title = {Skew Strikes Back: New Developments in the Theory of Join Algorithms},
-  year = {2014},
-  issue_date = {December 2013},
-  publisher = {Association for Computing Machinery},
-  address = {New York, NY, USA},
-  volume = {42},
-  number = {4},
-  issn = {0163-5808},
-  url = {https://arxiv.org/pdf/1310.3314.pdf},
-  doi = {10.1145/2590989.2590991},
-  journal = {SIGMOD Rec.},
-  month = feb,
-  pages = {5–16},
-  numpages = {12}
-}
-</pre>
-
-<a name="10.1145/2213836.2213946"></a><pre>
-@inproceedings{<a href="references.html#10.1145/2213836.2213946">10.1145/2213836.2213946</a>,
-  author = {Sikka, Vishal and F\"{a}rber, Franz and Lehner, Wolfgang and Cha, Sang Kyun and Peh, Thomas and Bornh\"{o}vd, Christof},
-  title = {Efficient Transaction Processing in {SAP} {HANA} Database: The End of a Column Store Myth},
-  year = {2012},
-  isbn = {9781450312479},
-  publisher = {Association for Computing Machinery},
-  address = {New York, NY, USA},
-  url = {https://15799.courses.cs.cmu.edu/fall2013/static/papers/p731-sikka.pdf},
-  doi = {10.1145/2213836.2213946},
-  abstract = {The SAP HANA database is the core of SAP's new data management platform. The overall goal of the SAP HANA database is to provide a generic but powerful system for different query scenarios, both transactional and analytical, on the same data representation within a highly scalable execution environment. Within this paper, we highlight the main features that differentiate the SAP HANA database from classical relational database engines. Therefore, we outline the general architecture and design criteria of the SAP HANA in a first step. In a second step, we challenge the common belief that column store data structures are only superior in analytical workloads and not well suited for transactional workloads. We outline the concept of record life cycle management to use different storage formats for the different stages of a record. We not only discuss the general concept but also dive into some of the details of how to efficiently propagate records through their life cycle and moving database entries from write-optimized to read-optimized storage formats. In summary, the paper aims at illustrating how the SAP HANA database is able to efficiently work in analytical as well as transactional workload environments.},
-  booktitle = {Proceedings of the 2012 ACM SIGMOD International Conference on Management of Data},
-  pages = {731–742},
-  numpages = {12},
-  keywords = {column store, transaction processing, sap hana},
-  location = {Scottsdale, Arizona, USA},
-  series = {SIGMOD '12}
-}
-</pre>
-
 <a name="10.14778/3436905.3436913"></a><pre>
 @article{<a href="references.html#10.14778/3436905.3436913">10.14778/3436905.3436913</a>,
   author = {Li, Tianyu and Butrovich, Matthew and Ngom, Amadou and Lim, Wan Shen and McKinney, Wes and Pavlo, Andrew},
@@ -181,26 +141,6 @@
   timestamp = {Mon, 18 Jul 2022 17:13:00 +0200},
   biburl = {https://dblp.org/rec/conf/cidr/BonczZN05.bib},
   bibsource = {dblp computer science bibliography, https://dblp.org}
-}
-</pre>
-
-<a name="10.1145/3035918.3056101"></a><pre>
-@inproceedings{<a href="references.html#10.1145/3035918.3056101">10.1145/3035918.3056101</a>,
-  author = {Verbitski, Alexandre and Gupta, Anurag and Saha, Debanjan and Brahmadesam, Murali and Gupta, Kamal and Mittal, Raman and Krishnamurthy, Sailesh and Maurice, Sandor and Kharatishvili, Tengiz and Bao, Xiaofeng},
-  title = {{Amazon} {Aurora}: Design Considerations for High Throughput Cloud-Native Relational Databases},
-  year = {2017},
-  isbn = {9781450341974},
-  publisher = {Association for Computing Machinery},
-  address = {New York, NY, USA},
-  url = {https://web.stanford.edu/class/cs245/readings/aurora.pdf},
-  doi = {10.1145/3035918.3056101},
-  abstract = {Amazon Aurora is a relational database service for OLTP workloads offered as part of Amazon Web Services (AWS). In this paper, we describe the architecture of Aurora and the design considerations leading to that architecture. We believe the central constraint in high throughput data processing has moved from compute and storage to the network. Aurora brings a novel architecture to the relational database to address this constraint, most notably by pushing redo processing to a multi-tenant scale-out storage service, purpose-built for Aurora. We describe how doing so not only reduces network traffic, but also allows for fast crash recovery, failovers to replicas without loss of data, and fault-tolerant, self-healing storage. We then describe how Aurora achieves consensus on durable state across numerous storage nodes using an efficient asynchronous scheme, avoiding expensive and chatty recovery protocols. Finally, having operated Aurora as a production service for over 18 months, we share the lessons we have learnt from our customers on what modern cloud applications expect from databases.},
-  booktitle = {Proceedings of the 2017 ACM International Conference on Management of Data},
-  pages = {1041–1052},
-  numpages = {12},
-  keywords = {recovery, quorum models, databases, log processing, performance, replication, distributed systems, oltp},
-  location = {Chicago, Illinois, USA},
-  series = {SIGMOD '17}
 }
 </pre>
 
@@ -322,26 +262,6 @@
 }
 </pre>
 
-<a name="10.1145/3183713.3196931"></a><pre>
-@inproceedings{<a href="references.html#10.1145/3183713.3196931">10.1145/3183713.3196931</a>,
-  author = {Zhang, Huanchen and Lim, Hyeontaek and Leis, Viktor and Andersen, David G. and Kaminsky, Michael and Keeton, Kimberly and Pavlo, Andrew},
-  title = {{SuRF:} Practical Range Query Filtering with Fast Succinct Tries},
-  year = {2018},
-  isbn = {9781450347037},
-  publisher = {Association for Computing Machinery},
-  address = {New York, NY, USA},
-  url = {https://www.cs.cmu.edu/~huanche1/publications/surf_paper.pdf},
-  doi = {10.1145/3183713.3196931},
-  abstract = {We present the Succinct Range Filter (SuRF), a fast and compact data structure for approximate membership tests. Unlike traditional Bloom filters, SuRF supports both single-key lookups and common range queries: open-range queries, closed-range queries, and range counts. SuRF is based on a new data structure called the Fast Succinct Trie (FST) that matches the point and range query performance of state-of-the-art order-preserving indexes, while consuming only 10 bits per trie node. The false positive rates in SuRF for both point and range queries are tunable to satisfy different application needs. We evaluate SuRF in RocksDB as a replacement for its Bloom filters to reduce I/O by filtering requests before they access on-disk data structures. Our experiments on a 100 GB dataset show that replacing RocksDB's Bloom filters with SuRFs speeds up open-seek (without upper-bound) and closed-seek (with upper-bound) queries by up to 1.5\texttimes{} and 5\texttimes{} with a modest cost on the worst-case (all-missing) point query throughput due to slightly higher false positive rate.},
-  booktitle = {Proceedings of the 2018 International Conference on Management of Data},
-  pages = {323–336},
-  numpages = {14},
-  keywords = {fast succinct tries, lsm-trees, range filter, succinct data structures, surf},
-  location = {Houston, TX, USA},
-  series = {SIGMOD '18}
-}
-</pre>
-
 <a name="10.1145/800296.811515"></a><pre>
 @inproceedings{<a href="references.html#10.1145/800296.811515">10.1145/800296.811515</a>,
   author = {Chamberlin, Donald D. and Boyce, Raymond F.},
@@ -402,6 +322,26 @@
   month = sep,
   pages = {54–66},
   numpages = {13}
+}
+</pre>
+
+<a name="10.1145/1376616.1376645"></a><pre>
+@inproceedings{<a href="references.html#10.1145/1376616.1376645">10.1145/1376616.1376645</a>,
+  author = {Brantner, Matthias and Florescu, Daniela and Graf, David and Kossmann, Donald and Kraska, Tim},
+  title = {Building a Database on {S3}},
+  year = {2008},
+  isbn = {9781605581026},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://people.csail.mit.edu/kraska/pub/sigmod08-s3.pdf},
+  doi = {10.1145/1376616.1376645},
+  abstract = {There has been a great deal of hype about Amazon's simple storage service (S3). S3 provides infinite scalability and high availability at low cost. Currently, S3 is used mostly to store multi-media documents (videos, photos, audio) which are shared by a community of people and rarely updated. The purpose of this paper is to demonstrate the opportunities and limitations of using S3 as a storage system for general-purpose database applications which involve small objects and frequent updates. Read, write, and commit protocols are presented. Furthermore, the cost (\$), performance, and consistency properties of such a storage system are studied.},
+  booktitle = {Proceedings of the 2008 ACM SIGMOD International Conference on Management of Data},
+  pages = {251–264},
+  numpages = {14},
+  keywords = {ec2, database, simpledb, cost trade-off, aws, storage system, s3, concurrency, sqs, performance, cloud computing, eventual consistency},
+  location = {Vancouver, Canada},
+  series = {SIGMOD '08}
 }
 </pre>
 
