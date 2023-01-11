@@ -2,29 +2,9 @@
 <html lang="en">
 
   <head>
-    <script>
-     // If 'prefers-color-scheme' is not supported, fall back to light mode.
-     // In this case, light.css will be downloaded with 'highest' priority.
-     if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
-       document.documentElement.style.display = 'none';
-       document.head.insertAdjacentHTML(
-         'beforeend',
-         '<link rel="stylesheet" href="resources/css/light.css" onload="document.documentElement.style.display = \'\'">',
-       );
-     }
-    </script>
-    <!--  // following advice from: -->
-    <!--  // https://web.dev/prefers-color-scheme/ -->
-    <link rel="stylesheet" href="/resources/css/dark.css" media="(prefers-color-scheme: dark)" />
-    <link rel="stylesheet" href="/resources/css/light.css" media="(prefers-color-scheme: light)" />
-    <link rel="stylesheet" href="/resources/css/endb.css">
+    include(`_head.html')
     <link rel="stylesheet" href="/resources/css/bib.css" />
-
-    <meta charset="utf-8">
-    <meta name="description" content="endatabas">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>endatabas | Dynamic SQL in the Clouds.</title>
+    <title>endatabas | Bibliography.</title>
   </head>
 
   <body color-mode="user">
@@ -34,7 +14,7 @@ include(`_header.html')
 
       <article>
         <section>
-          <h2>Bibliography</h2>
+          <h2>Bibliography.</h2>
           <p>
             In addition to
             <a href="references.html">our reference list of primary sources</a>,
