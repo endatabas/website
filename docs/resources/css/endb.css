@@ -287,6 +287,12 @@ article section {
   flex: 0 1 40%;
 }
 
+.snippet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 blockquote {
   padding: 1rem;
   text-align: justify;
@@ -296,19 +302,30 @@ blockquote {
   font-family: 'Special Elite';
 }
 
+blockquote p:first-child {
+  margin-top: 0;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
 blockquote pre {
   margin-left: 2rem;
   font-family: 'Special Elite';
 }
 
-blockquote footer {
+blockquote + footer {
+  padding: 1rem;
+  max-width: 48rem;
+  margin: 0;
   text-align: right;
   font-family: Alata;
   font-size: 1rem;
   margin: 0;
 }
 
-blockquote footer em {
+blockquote + footer em {
   font-weight: normal;
   font-style: normal;
   padding: 0;
@@ -317,7 +334,7 @@ blockquote footer em {
   display: block;
 }
 
-blockquote footer a {
+blockquote + footer a {
   color: inherit;
 }
 
