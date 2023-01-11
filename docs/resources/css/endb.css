@@ -195,7 +195,7 @@ main {
 
 main > h2 {
   /* hide h2 on homepage unless printed */
-  display: none;
+  display: block; /* none */
 }
 
 main > article > section > h3 {
