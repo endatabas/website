@@ -1,12 +1,14 @@
 /* General: Alata-Regular.ttf does not have web font equivalents */
 @font-face {
-    font-family: 'Alata';
-    src: url('/resources/fonts/Alata/Alata-Regular.ttf') format('truetype');
+  font-family: 'Alata';
+  font-display: swap;
+  src: url('/resources/fonts/Alata/Alata-Regular.ttf') format('truetype');
 }
 
 /* Whitepaper: SpecialElite-Regular.ttf does not have web font equivalents */
 @font-face {
   font-family: 'Special Elite';
+  font-display: swap;
   src: url('/resources/fonts/Special_Elite/SpecialElite-Regular.ttf') format('truetype');
 }
 
@@ -15,6 +17,7 @@
   font-family: 'Share Tech Mono';
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
   src: url('/resources/fonts/Share_Tech_Mono/share-tech-mono-v15-latin-regular.eot');
   src: url('/resources/fonts/Share_Tech_Mono/share-tech-mono-v15-latin-regular.eot') format('embedded-opentype'),
   url('/resources/fonts/Share_Tech_Mono/share-tech-mono-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
@@ -97,7 +100,7 @@ html {
 }
 
 body {
-  font-family: Alata, Helvetica;
+  font-family: Alata, Arial, Helvetica, sans-serif;
   color: var(--color);
   background-color: var(--background-color);
   height: 100%;
@@ -137,11 +140,11 @@ header {
 }
 
 .logo {
-    margin-top: 0;
-    font-size: 5rem;
-    margin-bottom: 0;
-    font-weight: normal;
-    font-family: 'Share Tech Mono';
+  margin-top: 0;
+  font-size: 5rem;
+  margin-bottom: 0;
+  font-weight: normal;
+  font-family: 'Share Tech Mono', Courier, monospace;
 }
 
 .logo a {
@@ -299,7 +302,7 @@ blockquote {
   font-size: 1.5rem;
   max-width: 48rem;
   margin: 0;
-  font-family: 'Special Elite';
+  font-family: 'Special Elite', Courier, monospace;
 }
 
 blockquote p:first-child {
@@ -312,7 +315,7 @@ blockquote p:last-child {
 
 blockquote pre {
   margin-left: 2rem;
-  font-family: 'Special Elite';
+  font-family: 'Special Elite', Courier, monospace;
 }
 
 blockquote + footer {
@@ -320,7 +323,7 @@ blockquote + footer {
   max-width: 48rem;
   margin: 0;
   text-align: right;
-  font-family: Alata;
+  font-family: Alata, Arial, Helvetica, sans-serif;
   font-size: 1rem;
   margin: 0;
 }
