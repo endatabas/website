@@ -9,8 +9,8 @@ From: https://www.youtube.com/watch?v=3zsyjfu3Hk4&t=50s
 3. On Duplicate: Filters > Distorts > Newsprint
 4. Color Model: White-on-Black or Black-on-White
 5. Pattern: Circle
-6. Period: ~4.00
-7. Angle: ~75.0 (play a lot)
+6. Period: 3.00 to 4.00
+7. Angle: 75.0 is a good default but play a lot
 8. OK
 
 == B. Colorize
