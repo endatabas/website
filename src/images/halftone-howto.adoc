@@ -1,0 +1,25 @@
+= Halftone How-To
+
+From: https://www.youtube.com/watch?v=3zsyjfu3Hk4&t=50s
+
+== A. Add Halftone Dots
+
+1. Open photo
+2. Duplicate layer
+3. On Duplicate: Filters > Distorts > Newsprint
+4. Color Model: White-on-Black or Black-on-White
+5. Pattern: Circle
+6. Period: ~4.00
+7. Angle: ~75.0 (play a lot)
+8. OK
+
+== B. Colorize
+
+1. On Duplicate: Colors > Color to Alpha
+2. Color: White or Black (depends on A.4: if Black-on-White, then Black)
+3. Select Yellow or Green as foreground and/or background color
+4. Add Layer + move between other layers
+5. Fill With: Yellow or Green (foreground/background)
+6. On Duplicate: Lock Alpha Channel (checkerboard icon)
+7. Select foreground color
+8. Click-and-drag color onto "dots"
