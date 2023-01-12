@@ -17,9 +17,9 @@ From: https://www.youtube.com/watch?v=3zsyjfu3Hk4&t=50s
 
 1. On Duplicate: Colors > Color to Alpha
 2. Color: White or Black (depends on A.4: if Black-on-White, then Black)
-3. Select Yellow or Green as foreground and/or background color
+3. Select Yellow or Black as foreground and/or background color
 4. Add Layer + move between other layers
-5. Fill With: Yellow or Green (foreground/background)
+5. Fill With: Yellow or Black (foreground/background)
 6. On Duplicate: Lock Alpha Channel (checkerboard icon)
 7. Select foreground color
 8. Click-and-drag color onto "dots"
