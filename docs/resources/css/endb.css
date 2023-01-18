@@ -442,6 +442,10 @@ blockquote + footer a {
     margin: 0;
   }
 
+  body {
+    padding-top: 1.0rem;
+  }
+
   body > header > nav {
     display: none;
   }
@@ -452,7 +456,8 @@ blockquote + footer a {
   }
 
   main h2 {
-    color: #ffffff;
+    /* color: #ffffff; */
+    color: #000000;
     height: 25rem;
     padding: 1.0rem;
     margin: 1.0rem;
