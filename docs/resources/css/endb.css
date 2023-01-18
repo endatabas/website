@@ -456,8 +456,7 @@ blockquote + footer a {
   }
 
   main h2 {
-    /* color: #ffffff; */
-    color: #000000;
+    color: #ffffff;
     height: 25rem;
     padding: 1.0rem;
     margin: 1.0rem;
