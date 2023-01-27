@@ -1,0 +1,139 @@
+= Endatabas
+
+== Pitch
+
+Endatabas is an open source immutable database that eliminates the accidental
+complexity and manual work assumed by databases of the past 50 years.
+
+
+== Market
+
+Since the market for databases is massive ($80b), Endatabas will start small.
+First, it will reduce development complexity with dynamic SQL,
+eliminate IT operations through DBaaS, and automate dull
+business processes like auditing and reconciliation with immutability.
+
+
+== Timing
+
+It is difficult for legacy database vendors to address all the
+complexity that has accrued over the past half-century.
+Over the past ten years, hardware and networking have finally grown
+to meet the fantasies of computer scientists in the 1980s
+-- but database systems are too calcified to exploit this.
+
+Worse, data tools are still divided between "operational" and "analytical";
+asking deep questions of your data requires copying it into a second database.
+
+Most companies provide distribution as SaaS (DBaaS), but each database
+struggles to take advantage of recent advancements.
+
+Some products attempt to separate storage from compute (Amazon Aurora,
+Google AlloyDB, Neon).
+This creates the opportunity for "serverless" databases, but they cling
+to an outmoded paradigm (row-oriented SQL-92 in the form of Postgres)
+for its stability and don't offer time-travelling queries over immutable
+data to users.
+Immutability is safety.
+Every database should have an undo button.
+
+Some products allow users semi-structured data (Mongo, Neo4j) but
+force users to retrieve data with lax, ad-hoc query languages.
+Past eras of NoSQL and NewSQL will be followed by Dynamic SQL with gradual typing.
+The UX of Dynamic SQL can be both fluid and self-evident.
+
+A few OLTP databases offer read-only "time travel" into the past, but none
+offer powerful read-write corrections into the past or speculative data written
+"into the future" (_bitemporality_).
+
+Light and adaptive indexing exists today, removing the need for users to
+manually configure indexes before they store their first record.
+But even newer SaaS databases like Fauna choose to force a priori indexing
+on users rather than generating indexes with machine learning.
+
+Immutable data with timeline queries, joyful UX, infinite object storage,
+well-understood approaches to columnar data, rigorous query languages,
+and adaptive indexing all exist today. No database puts them all together yet.
+Any vendor that limits itself to one or two of these advances loses out on the
+complete picture: a database that is automated in every possible way,
+avoiding operational problems altogether.
+
+It's an exciting time for databases.
+In the next ten years, we will see the dream of early database visionaries realized.
+We are on the verge of a sea change.
+
+
+== Distribution
+
+Endatabas will begin its life as an open source project.
+This tells us very little about its revenue potential, but we can at
+least use early open source releases to validate our priorites against the
+utility early users want from the product.
+
+Although AGPL-3.0 licensing provides us an opportunity for a commercial dual
+license, our primary distribution model will be DBaaS.
+Endatabas isn't complete without fully-automated serverless delivery.
+
+
+== Team
+
+Håkan was previously the architect of XTDB (https://xtdb.com/core2/). He has
+been researching both the market and architecture of Endatabas for over five years.
+
+Steven has founded other companies such as nilenso (https://nilenso.com). Over the
+past two years, he worked with Håkan on the product vision for XTDB.
+
+In the early 2000s, they were both involved in the budding agile movement at
+ThoughtWorks and elsewhere -- both appreciate lean business practices as
+much as lean software.
+
+They both have the commitment, time, and patience to see Endatabas through to
+success.
+
+
+== Why do we need money?
+
+We are not in a rush to secure funding. We have been speaking to other founders,
+reading VCs' websites and datasheets, and generally snooping around.
+Some VCs are a better fit for Endatabas than others.
+We want to work with angels and VCs who understand what we are building, and why.
+
+Because our goal is to build a profitable business as soon as possible,
+we will remain a small team even after securing initial funding.
+Q1 and Q2 2023 will be a lean period of building on our own savings.
+However, by the end of Q2 we expect to begin work on our DBaaS infrastructure,
+which will require additional money for staff salaries and cloud bills.
+
+Ultimately, a successful VC will help us build the early infrastructure for
+Endatabas and expand our network.
+
+At this stage, we want to meet some investors, listen to
+their advice, and hear what an investment in Endatabas means to them.
+
+<<<
+
+== Etc.
+
+* Website:      https://www.endatabas.com
+* Stage:        Angel / Pre-Seed
+* Team Size:    2
+* Capital:      Self-funded
+* Burn:         $5,000/mo (USD)
+* Location:     Remote (Sweden, Canada)
+* Bibliography: https://www.endatabas.com/bibliography.html
+
+
+== Meeting in person
+
+I (Steven) will be in California from January 26th to March 10th. From
+January 31st to March 4th (inclusive) I am attending a 30-day Vipassana
+course, which means I won't have access to my phone or email for that period.
+My colleague Conrad will schedule March meetings on my behalf while I'm away.
+
+If you would like to meet me in person, you can schedule a meeting
+for the following days as follows:
+
+* January 27 - 30: steven@endatabas.com
+* March 5 - 10: conrad@endatabas.com
+
+I'm looking forward to meeting a variety of people on both ends of my trip.
