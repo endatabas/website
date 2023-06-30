@@ -63,6 +63,10 @@ nav ul li {
     text-align: left;
 }
 
+nav ul li img {
+  vertical-align: sub;
+}
+
 a {
     display: inline-block;
     text-decoration: none;
