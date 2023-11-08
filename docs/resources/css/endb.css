@@ -274,7 +274,7 @@ nav > a {
     display: none;
 }
 
-nav #github-text {
+nav .menu-text {
   display: none;
 }
 
@@ -387,7 +387,7 @@ blockquote + footer a {
         font-size: 2rem;
     }
 
-  nav:focus-within #github-text {
+  nav:focus-within .menu-text {
     display: inline-block;
   }
 
