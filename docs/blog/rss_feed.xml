@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Endataboss</title>
+  <description>Thoughts on building Endatabas</description>
+  <link>http://www.endatabas.com/blog/rss_feed.xml</link>
+  <lastBuildDate>Wed, 08 Nov 2023 22:52:30 -0400</lastBuildDate>
+  <pubDate>Wed, 08 Nov 2023 22:52:30 -0400</pubDate>
+  <ttl>1800</ttl>
+<item>
+    <title>First Post</title>
+    <description><![CDATA[<h1>First Post</h1>
+
+<p>Hi2u, I am the first post.</p>
+]]></description>
+    <pubDate>Wed, 08 Nov 2023 22:35:18 -0400</pubDate>
+    <link>http://www.endatabas.com/blog/first.html</link>
+    <guid>http://www.endatabas.com/blog/first.html</guid>
+  </item>
+<item>
+    <title>Second Post</title>
+    <description><![CDATA[<h1>Second Post</h1>
+
+<p>Hi2u, I am 2nd post </p>
+]]></description>
+    <pubDate>Wed, 08 Nov 2023 22:35:33 -0400</pubDate>
+    <link>http://www.endatabas.com/blog/second.html</link>
+    <guid>http://www.endatabas.com/blog/second.html</guid>
+  </item>
+</channel>
+</rss>

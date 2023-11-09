@@ -6,6 +6,7 @@ endatabas.com
 
 ```
 sudo apt install bibtex2html m4 python
+pip install markdown2
 ```
 
 ## Build
