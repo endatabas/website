@@ -167,6 +167,11 @@ header {
   background: transparent;
 }
 
+.cta-group {
+  display: flex;
+  justify-content: space-around;
+}
+
 .profile {
   display: flex;
   padding: 1.2rem;
@@ -340,6 +345,32 @@ blockquote + footer em {
 
 blockquote + footer a {
   color: inherit;
+}
+
+.cta {
+  border-radius: .7rem;
+  padding: 1.2rem;
+  margin: 1.2rem;
+  font-size: 1.7rem;
+  text-align: center;
+  text-transform: lowercase;
+  font-weight: normal;
+  /* font-family: 'Share Tech Mono', Courier, monospace; */
+  font-family: 'Special Elite', Courier, monospace;
+}
+
+.cta:hover {
+  text-decoration: none;
+}
+
+.cta-on {
+  background-color: var(--endb-yellow);
+  color: var(--background-color);
+}
+
+.cta-off {
+  background-color: var(--endb-green);
+  color: var(--color);
 }
 
 @media screen and (max-width:915px) {
