@@ -1,0 +1,18 @@
+-----------------------------------------
+Steven Deobald's .plan for Dec 02, 2023
+-----------------------------------------
+
+* finished 3 copies of the investment memo
+* set up matrix and discord servers (matrix is private)
+* Strange Loop Slack, Reddit, and Hacker News all had endb mentions
+* added plausible.io to endatabas.com
+* sketched the pitch deck and started working on it in earnest
+
+Håkan and I had a long conversation today around 128/256-bit Decimals in Arrow and, kind of unrelatedly, date/time types which track timezones. Timezones I honestly don't care about ... I acknowledge the TigerBeetle / Joran Dirk Greef perspective that TZ is essential to correct time storage: https://www.youtube.com/watch?v=ayG7ltGRRHs (23:00) ... but I give it a pass for now, since a second column suffices. Decimals, on the other hand, seem valuable for a "simple" currency data type. Unfortunately, Arrow will store Decimals of various precision as different types, which is untenable. One option is a SQL Server style `MONEY` type, but with a higher precision than 4? We parked Decimals for now/again.
+
+TODOs:
+
+* [ ] add an "executive summary" to the "Why?" document
+* [ ] local plausible.io js? (the current one is ad-blocked, for good reason)
+* [ ] add twitter / mastodon / youtube? / discord to .com
+* [ ] finish pitch deck
