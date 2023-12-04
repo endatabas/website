@@ -185,13 +185,37 @@ header {
   min-width: 17rem;
 }
 
+.social ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social ul li {
+  display: inline-block;
+  margin: 0 0.5rem;
+  position: relative;
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.social ul li img {
+  vertical-align: sub;
+}
+
+body > .social {
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 4rem;
+}
+
 body > footer {
-    color: var(--color);
-    top: 100vh;
-    position: sticky;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 4rem;
+  color: var(--color);
+  top: 100vh;
+  position: sticky;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
 }
 
 main {
