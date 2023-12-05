@@ -13,7 +13,7 @@ Håkan and I had a long conversation today around 128/256-bit Decimals in Arrow 
 TODOs:
 
 * [x] add twitter / mastodon / youtube? / discord to .com
-* [ ] add an "executive summary" to the "Why?" document
+* [x] add an "executive summary" to the "Why?" document
     * 'What Goes Around Comes Around'
     * collapsing the toolchain
     * timing: stop repeating ourselves (past) + land next-50-years tech as early as possible (future)
