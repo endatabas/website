@@ -200,6 +200,7 @@ header {
 
 .social ul li img {
   vertical-align: sub;
+  filter: drop-shadow(3px 3px 3px var(--endb-green));
 }
 
 body > .social {
