@@ -20,8 +20,25 @@ TODOs:
     * link "Why?" doc from docs intro
     * reply in HN thread, mention Discord, ask for feedback: https://news.ycombinator.com/item?id=38484654
 * [ ] local plausible.io js? (the current one is ad-blocked, for good reason)
-* [ ] finish pitch deck
+    * [ ] switch to Netlify?
+* [x] finish pitch deck
 * [ ] revisit memos
 * [ ] blog
 * [ ] W3COSS
 * [ ] AIGPL-4.0
+
+-----------------------------------------
+Steven Deobald's .plan for Dec 30, 2023
+-----------------------------------------
+
+* a long few weeks with the pitch deck, mostly ... it feels good, though.
+* validated the data model with Nikhil, Aaron, and others
+
+TODOs:
+
+* [ ] switch to Netlify + proxy Plausible?
+* [ ] revisit memos, finally
+* [ ] rank and contact VCs
+* [ ] blog
+    * [ ] W3COSS / W3OSS
+    * [ ] AIGPL-4.0
