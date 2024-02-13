@@ -1,0 +1,9 @@
+iframe.console {
+    margin: auto;
+    width: 80em;
+    height: 40em;
+    display: block;
+    border-radius: 10px;
+    border: 1em solid black;
+    background-color: black;
+}

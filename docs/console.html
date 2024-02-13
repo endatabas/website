@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <script>
+ // If 'prefers-color-scheme' is not supported, fall back to light mode.
+ // In this case, light.css will be downloaded with 'highest' priority.
+ if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+   document.documentElement.style.display = 'none';
+   document.head.insertAdjacentHTML(
+     'beforeend',
+     '<link rel="stylesheet" href="resources/css/light.css" onload="document.documentElement.style.display = \'\'">',
+   );
+ }
+</script>
+<!--  // following advice from: -->
+<!--  // https://web.dev/prefers-color-scheme/ -->
+<link rel="stylesheet" href="/resources/css/dark.css" media="(prefers-color-scheme: dark)" />
+<link rel="stylesheet" href="/resources/css/light.css" media="(prefers-color-scheme: light)" />
+<link rel="stylesheet" href="/resources/css/endb.css">
+
+<meta charset="utf-8">
+<meta name="description" content="endatabas">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Endatabas">
+<meta name="twitter:site" content="@endatabas">
+<meta name="twitter:creator" content="@endatabas">
+<meta name="twitter:description" content="SQL Document Database with Full History">
+<meta name="twitter:image" content="https://www.endatabas.com/resources/images/social.png">
+<meta property="og:image" content="https://www.endatabas.com/resources/images/social.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<script defer data-domain="endatabas.com" src="/js/script.js"></script>
+
+    <link rel="stylesheet" href="/resources/css/console.css" />
+    <title>endatabas | Console.</title>
+  </head>
+
+  <body color-mode="user">
+      <header>
+    <h1 id="home" class="logo"><a href="/">end<span class="letter-box">a</span><span class="letter-box">t</span><span class="letter-box">a</span>b<span class="letter-box">a</span><span class="letter-box">s</span></a></h1>
+    <nav>
+      <a href="#" tabindex="0">☰</a>
+      <ul>
+        <li tabindex="1"><a href="https://docs.endatabas.com" target="_blank">
+          <img src="resources/images/book-icon-yellow.svg" width="30" height="30" title="Documentation" />
+          <span class="menu-text">Documentation</span>
+        </a></li>
+        <li tabindex="2"><a href="https://github.com/endatabas/endb" target="_blank">
+          <img src="resources/images/github-mark-yellow.svg" width="30" height="30" title="GitHub" />
+          <span class="menu-text">GitHub</span>
+        </a></li>
+        <li tabindex="3"><a href="/bibliography.html">
+          <img src="resources/images/bibliography-icon-yellow.svg" width="30" height="30" title="Bibliography" />
+          <span class="menu-text">Bibliography</span>
+        </a></li>
+        <!--     <li><a href="#docs">Docs</a></li> -->
+        <!--     <li><a href="#product">Product</a></li> -->
+        <!--     <li><a href="#company">Company</a></li> -->
+        <!--     <li><a href="#community">Community</a></li> -->
+        <!--     <li><a href="#sign-in"><b>Sign&nbsp;In</b></a></li> -->
+      </ul>
+    </nav>
+  </header>
+
+
+    <main>
+      <iframe class="console" src="console/endb_console.html" frameborder="0"></iframe>
+    </main>
+
+    <footer>
+  Copyright © 2024 Håkan Råberg and Steven Deobald
+</footer>
+
+  </body>
+
+</html>
