@@ -1,9 +1,22 @@
 iframe.console {
     margin: auto;
-    width: 80em;
-    height: 40em;
     display: block;
-    border-radius: 10px;
+    border-radius: 0.5em;
     border: 1em solid black;
     background-color: black;
+    height: 70vh;
+    min-height: 24em;
+    max-height: 40em;
+    width: 90%;
+    max-width: 80em;
+}
+
+@media screen and (max-width:851px) {
+    main {
+        padding: 0;
+    }
+    iframe.console {
+        border: 2vw solid black;
+        border-radius: 0;
+    }
 }
