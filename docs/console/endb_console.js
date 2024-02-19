@@ -1,14 +1,21 @@
 /* eslint-env browser */
 
 let worker;
-const callbacks = {};
+const sentMessages = {};
 
 let id = 0;
-function sendToWorker(method, params, cb) {
+async function sendToWorker(method, params) {
     id++;
-    callbacks[id.toString()] = cb;
+    let resolve, reject;
+    const promise = new Promise((res, rej) => {
+        resolve = res;
+        reject = rej;
+    });
+    sentMessages[id.toString()] = { resolve, reject };
     const message = {id: id.toString(), method, params};
     worker.postMessage(message);
+
+    return promise;
 }
 
 const spinnerElement = document.getElementById("spinner");
@@ -27,27 +34,34 @@ const EndbConsole = {
         outputElement.appendChild(div);
         footerElement.scrollIntoView({block: "nearest"});
     },
-    postRun: () => {
+    postRun: async () => {
         spinnerElement.style.display = "none";
         inputElement.style.display = "block";
 
-        sendToWorker("common_lisp_eval", [`
-(progn
+        await sendToWorker("common_lisp_eval", [`
+(endb/lib:with-trace-span "startup"
   (endb/lib:log-info "version ~A" (endb/lib:get-endb-version))
   (endb/lib:log-info "data directory :memory:")
-  (defvar *db* (endb/sql:make-db)))`],
-             () => {
-                 console.log("running on https://ecl.common-lisp.dev/ powered by https://emscripten.org/")
-                 const div = document.createElement("div");
-                 div.innerHTML = "running on <a href=\"https://ecl.common-lisp.dev/\" target=\"_top\">https://ecl.common-lisp.dev/</a> powered by <a href=\"https://emscripten.org/\" target=\"_top\">https://emscripten.org/</a>";
-                 outputElement.appendChild(div);
+  (defvar *db* (endb/sql:make-db)))`]);
 
-                 EndbConsole.print("print :help for help.\n\n");
-             });
+        console.log("running on https://ecl.common-lisp.dev/ powered by https://emscripten.org/");
+        const div = document.createElement("div");
+        div.innerHTML = "running on <a href=\"https://ecl.common-lisp.dev/\" target=\"_top\">https://ecl.common-lisp.dev/</a> powered by <a href=\"https://emscripten.org/\" target=\"_top\">https://emscripten.org/</a>";
+        outputElement.appendChild(div);
 
-        function executeSQL(sql) {
-            sendToWorker("common_lisp_eval",[`
-(let ((endb/json:*json-ld-scalars* nil))
+        EndbConsole.print("print :help for help.\n\n");
+
+        function escapeHTML(text) {
+            const textarea = document.createElement("textarea");
+            textarea.innerText = text;
+            return textarea.innerHTML;
+        }
+
+        async function executeSQL(sql) {
+            const json = await sendToWorker("common_lisp_eval", [`
+(let ((endb/json:*json-ld-scalars* nil)
+      (endb/lib/cst:*default-filename* "<console>")
+      (endb/lib/cst:*error-strip-ansi-escape-codes* nil))
   (endb/json:json-stringify
     (handler-case
         (let ((write-db (endb/sql:begin-write-tx *db*)))
@@ -56,33 +70,59 @@ const EndbConsole = {
             (setf *db* (endb/sql:commit-write-tx *db* write-db))
             (fset:map ("result" result) ("resultCode" result-code))))
       (error (e)
-        (fset:map ("error" (format nil "~A" e)))))))`],
-                 (json) => {
-                     let {result, resultCode, error} = JSON.parse(JSON.parse(json));
-                     if (error) {
-                         EndbConsole.print(error);
-                     } else {
-                         if (!Array.isArray(resultCode)) {
-                             result = [[resultCode]];
-                             resultCode = ["result"];
-                         }
+        (fset:map ("error" (format nil "~A" e)))))))`]);
+            let {result, resultCode, error} = JSON.parse(JSON.parse(json));
+            if (error) {
+                const div = document.createElement("div");
+                error = escapeHTML(error);
+                error = error.replace(/\[(3\d(?:;\d+;\d+)?)m(.+?)\[0m/g, (match, p1, p2) => {
+                    return "<span class=\"ansi-" + p1.replaceAll(";", "-") + "\">" + p2 + "</span>";
+                });
+                div.innerHTML = error;
+                outputElement.appendChild(div);
+                console.log(div.innerText);
+            } else {
+                if (!Array.isArray(resultCode)) {
+                    result = [[resultCode]];
+                    resultCode = ["result"];
+                }
 
-                         console.log(resultCode.join("\t\t"));
-                         result.forEach((row) => {
-                             console.log(row.map((col) => JSON.stringify(col)).join("\t\t"));
-                         });
+                console.log(resultCode.join("\t\t"));
+                result.forEach((row) => {
+                    console.log(row.map((col) => JSON.stringify(col)).join("\t\t"));
+                });
 
-                         const thead = "<thead><tr>" + resultCode.map((col) => "<th>" + col + "</th>").join("") + "</tr></thead>";
-                         const tbody = "<tbody>" + result.map((row) => {
-                             return "<tr>" + row.map((col) => "<td>" + JSON.stringify(col) + "</td>").join("") + "</tr>";
-                         }).join("") + "</tbody>";
+                const table = document.createElement("table");
 
-                         const table = document.createElement("table");
-                         table.innerHTML = thead + tbody;
-                         outputElement.appendChild(table);
-                     }
-                     EndbConsole.print("\n");
-                 });
+                {
+                    const thead = document.createElement("thead");
+                    const tr = document.createElement("tr");
+                    resultCode.forEach((col) => {
+                        const th = document.createElement("th");
+                        th.innerText = col;
+                        tr.appendChild(th);
+                    })
+                    thead.appendChild(tr);
+                    table.appendChild(thead);
+                }
+
+                {
+                    const tbody = document.createElement("tbody");
+                    result.forEach((row) => {
+                        const tr = document.createElement("tr");
+                        row.forEach((col) => {
+                            const td = document.createElement("td");
+                            td.innerText = JSON.stringify(col, null, 2);
+                            tr.appendChild(td);
+                        });
+                        tbody.appendChild(tr);
+                    });
+                    table.appendChild(tbody);
+                }
+
+                outputElement.appendChild(table);
+            }
+            EndbConsole.print("\n");
         }
 
         function resizeInput() {
@@ -183,10 +223,10 @@ worker.onmessage = (e) => {
             }
         }
     } else if (id) {
-        const cb = callbacks[id];
-        delete callbacks[id];
-        if (cb) {
-            cb(result);
+        const promise = sentMessages[id];
+        delete sentMessages[id];
+        if (promise) {
+            promise.resolve(result);
         }
     }
 }
