@@ -27,7 +27,7 @@ include(`_header.html')
 
           <p>
             We will sell managed Endatabas as a service but it will always be open source.
-            You can <a target="_blank" href="https://docs.endatabas.com/tutorial/quickstart.html">try it today</a>
+            You can <a target="_blank" href="https://docs.endatabas.com/tutorial/quickstart.html">try the quickstart</a>
             or <a target="_blank" href="https://www.youtube.com/watch?v=oDHGjUMqPvI">watch the demo</a>.
           </p>
 
@@ -38,10 +38,28 @@ include(`_header.html')
 
         </section>
 
-        <section class="invisible">
+        <section>
+          <pre class="sql">
+-- store documents without CREATE TABLE
+INSERT INTO msgs
+  {text: "Here is some classic material",
+   user: "George",
+   workday: 2024-02-25,
+   media: [{type: "image", src: "dsm.png"},
+           {type: "video", src: "vldb.mp4"}]};
+
+-- retrieve documents with path expressions
+SELECT unnest(media) FROM msgs
+  WHERE msgs..type MATCH 'video';
+
+-- travel through time
+SELECT * FROM msgs
+  FOR SYSTEM_TIME AS OF 1985-10-26;
+            </pre>
+
           <div class="cta-group">
-            <a class="cta cta-on" target="_blank" href="https://docs.endatabas.com/tutorial/quickstart.html">
-              Try The Alpha
+            <a class="cta cta-on" target="_blank" href="console.html">
+              Try It Online
             </a>
             <a class="cta cta-off" target="_blank" href="https://www.youtube.com/watch?v=oDHGjUMqPvI">
               Watch The Demo

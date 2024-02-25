@@ -372,6 +372,15 @@ blockquote + footer a {
   color: inherit;
 }
 
+.sql {
+  padding: 1rem;
+  text-align: left;
+  font-size: 1.4rem;
+  max-width: 48rem;
+  margin: 0;
+  font-family: Courier, monospace;
+}
+
 .cta {
   border-radius: .7rem;
   padding: 1.2rem;
