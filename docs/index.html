@@ -107,7 +107,7 @@
            {type: <span class="lit">"video"</span>, src: <span class="lit">"vldb.mp4"</span>}]};
 
 -- retrieve documents with path expressions
-<span class="kw">SELECT</span> media <span class="kw">FROM</span> msgs
+<span class="kw">SELECT</span> user, media <span class="kw">FROM</span> msgs
 <span class="kw">  WHERE</span> msgs..type <span class="kw">MATCH</span> <span class="lit">'video'</span>;
 
 -- travel through time
