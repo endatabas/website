@@ -99,20 +99,20 @@
         <section>
           <pre class="sql">
 -- store documents without CREATE TABLE
-INSERT INTO msgs
-  {text: "Here is some classic material",
-   user: "George",
-   workday: 2024-02-25,
-   media: [{type: "image", src: "dsm.png"},
-           {type: "video", src: "vldb.mp4"}]};
+<span class="kw">INSERT INTO</span> msgs
+  {text: <span class="lit">"Here is some classic material"</span>,
+   user: <span class="lit">"George"</span>,
+   workday: <span class="lit">2024-02-25</span>,
+   media: [{type: <span class="lit">"image"</span>, src: <span class="lit">"dsm.png"</span>},
+           {type: <span class="lit">"video"</span>, src: <span class="lit">"vldb.mp4"</span>}]};
 
 -- retrieve documents with path expressions
-SELECT unnest(media) FROM msgs
-  WHERE msgs..type MATCH 'video';
+<span class="kw">SELECT</span> unnest(media) <span class="kw">FROM</span> msgs
+<span class="kw">  WHERE</span> msgs..type <span class="kw">MATCH</span> <span class="lit">'video'</span>;
 
 -- travel through time
-SELECT * FROM msgs
-  FOR SYSTEM_TIME AS OF 1985-10-26;
+<span class="kw">SELECT</span> * <span class="kw">FROM</span> msgs
+<span class="kw">  FOR SYSTEM_TIME AS OF</span> <span class="lit">1985-10-26</span>;
           </pre>
 
           <div class="cta-group">
