@@ -84,7 +84,8 @@
 
           <p>
             We will sell managed Endatabas as a service but it will always be open source.
-            You can <a target="_blank" href="https://docs.endatabas.com/tutorial/quickstart.html">try the quickstart</a>
+            You can <a target="_blank" href="https://docs.endatabas.com/tutorial/quickstart.html">install it today</a>,
+            <a target="_blank" href="console.html">try it online</a>,
             or <a target="_blank" href="https://www.youtube.com/watch?v=oDHGjUMqPvI">watch the demo</a>.
           </p>
 
@@ -105,17 +106,20 @@ INSERT INTO msgs
    media: [{type: "image", src: "dsm.png"},
            {type: "video", src: "vldb.mp4"}]};
 
--- query documents with path expressions
+-- retrieve documents with path expressions
 SELECT unnest(media) FROM msgs
   WHERE msgs..type MATCH 'video';
 
--- time travel
+-- travel through time
 SELECT * FROM msgs
-  FOR SYSTEM_TIME AS OF 2024-01-01;
-            </pre>
+  FOR SYSTEM_TIME AS OF 1985-10-26;
+          </pre>
 
           <div class="cta-group">
-            <a class="cta cta-on" target="_blank" href="console.html">
+            <a class="cta cta-on" target="_blank" href="https://docs.endatabas.com/tutorial/quickstart.html">
+              Install Endb
+            </a>
+            <a class="cta cta-off" target="_blank" href="console.html">
               Try It Online
             </a>
             <a class="cta cta-off" target="_blank" href="https://www.youtube.com/watch?v=oDHGjUMqPvI">
