@@ -375,7 +375,7 @@ blockquote + footer a {
 .sql {
   padding: 1rem;
   text-align: left;
-  font-size: 1.3rem;
+  font-size: clamp(0.7rem, 0.9rem + 0.4cqi, 1.3rem);
   max-width: 48rem;
   margin: 0;
   font-family: Courier, monospace;
@@ -423,9 +423,9 @@ blockquote + footer a {
 }
 
 @media screen and (max-width:851px) {
-    main {
-        padding: 0 1rem;
-    }
+  main {
+    padding: 0 1rem;
+  }
 
   article section {
     flex: 0 1 80%;
