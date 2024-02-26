@@ -167,11 +167,6 @@ header {
   background: transparent;
 }
 
-.cta-group {
-  display: flex;
-  justify-content: space-around;
-}
-
 .profile {
   display: flex;
   padding: 1.2rem;
@@ -242,8 +237,8 @@ main h2 {
   line-height: 1;
 }
 
-main article section > p {
-  padding: 0.4rem;
+main article section .intro-blurb > p {
+  padding: 0.4rem 0.4rem 0.4rem 1.0rem;
   color: var(--color);
   background-color: var(--background-color);
   font-size: 1.25rem;
@@ -372,6 +367,11 @@ blockquote + footer a {
   color: inherit;
 }
 
+.intro {
+  display: flex;
+  flex-direction: column;
+}
+
 .sql {
   padding: 1rem;
   text-align: left;
@@ -388,6 +388,15 @@ blockquote + footer a {
 
 .lit {
   color: var(--sql-green);
+}
+
+.cta-buffer {
+  flex-grow: 1;
+}
+
+.cta-group {
+  display: flex;
+  justify-content: space-around;
 }
 
 .cta {
