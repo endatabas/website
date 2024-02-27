@@ -372,7 +372,12 @@ blockquote + footer a {
   flex-direction: column;
 }
 
+.sql-wrapper {
+  overflow: auto;
+}
+
 .sql {
+  overflow: scroll;
   padding: 1rem;
   text-align: left;
   font-size: clamp(0.7rem, 0.9rem + 0.4cqi, 1.3rem);
@@ -397,6 +402,7 @@ blockquote + footer a {
 .cta-group {
   display: flex;
   justify-content: space-around;
+  flex-flow: row wrap;
 }
 
 .cta {
@@ -409,6 +415,7 @@ blockquote + footer a {
   font-weight: normal;
   /* font-family: 'Share Tech Mono', Courier, monospace; */
   font-family: 'Special Elite', Courier, monospace;
+  flex: 1;
 }
 
 .cta:hover {
@@ -433,7 +440,7 @@ blockquote + footer a {
 
 @media screen and (max-width:851px) {
   main {
-    padding: 0 1rem;
+    padding: 0;
   }
 
   article section {
@@ -494,6 +501,7 @@ blockquote + footer a {
     }
 
   .profile {
+    padding: 1rem;
     flex-flow: row wrap;
   }
 
@@ -507,10 +515,6 @@ blockquote + footer a {
 }
 
 @media screen and (max-width:360px) {
-  main {
-    padding: 0.5rem;
-  }
-
   header, section {
     margin: 0.5rem 0;
   }
