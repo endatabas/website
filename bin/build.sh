@@ -41,7 +41,7 @@
     m4 -I "./src/partials/" src/references_bib.html > docs/references_bib.html
     m4 -I "./src/partials/" src/bibliography.html > docs/bibliography.html
     m4 -I "./src/partials/" src/bibliography_bib.html > docs/bibliography_bib.html
-    m4 -I "./src/partials/" src/console.html > docs/console.html
+    m4 -I "./src/partials/" src/demo.html > docs/demo.html
 )
 
 printf "#### ...done.\n"

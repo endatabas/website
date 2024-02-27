@@ -24,7 +24,7 @@ Test on a local webserver. Requires `python3`.
 ./bin/run.sh
 ```
 
-## WASM Console
+## Live Demo (Wasm Console)
 
 Run `make docker-wasm` in the main repo and then copy the resulting files out of the container:
 
