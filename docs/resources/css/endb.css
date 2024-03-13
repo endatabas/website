@@ -299,7 +299,15 @@ nav > a {
     display: none;
 }
 
-nav .menu-text {
+nav .desktop-menu-text {
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+}
+
+nav .mobile-menu-text {
   display: none;
 }
 
@@ -477,7 +485,11 @@ blockquote + footer a {
         font-size: 2rem;
     }
 
-  nav:focus-within .menu-text {
+  nav:focus-within .desktop-menu-text {
+    display: none;
+  }
+
+  nav:focus-within .mobile-menu-text {
     display: inline-block;
   }
 
